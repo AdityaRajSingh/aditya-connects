@@ -8,7 +8,7 @@ const JourneySection = () => {
       year: "2020 - Present",
       title: "Google",
       role: "Software Developer",
-      description: "Focus on large-scale systems and innovation. Working on cutting-edge projects that impact millions of users.",
+      description: "Embracing the scale and complexity of big tech while exploring AI frontiers. Building systems that impact millions while nurturing entrepreneurial ambitions and preparing for the next leap.",
       icon: Building,
       color: "bg-gradient-teal"
     },
@@ -16,15 +16,15 @@ const JourneySection = () => {
       year: "2019",
       title: "Startup Journey",
       role: "Founding Engineer",
-      description: "Experience in a fast-paced, agile environment. Built products from the ground up and learned the art of rapid iteration.",
+      description: "Dove into the startup world to experience building from zero to one. Learned the art of rapid iteration, wearing multiple hats, and the thrill of creating something new. This experience ignited my entrepreneurial spirit.",
       icon: Rocket,
       color: "bg-gradient-purple"
     },
     {
       year: "2016 - 2019",
-      title: "Computer Science",
+      title: "Computer Science Engineering",
       role: "University Education",
-      description: "Built a strong foundation in algorithms, data structures, and software engineering principles.",
+      description: "Built the foundation with algorithms, data structures, and engineering principles. More importantly, developed a problem-solving mindset and discovered my passion for building technology that matters.",
       icon: GraduationCap,
       color: "bg-gradient-warm"
     }
@@ -38,7 +38,7 @@ const JourneySection = () => {
             My Journey
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            From classroom to Google - a path shaped by curiosity and determination.
+            From college → startups → big tech → entrepreneurial ambitions. A story of continuous learning, risk-taking, and building.
           </p>
         </div>
 

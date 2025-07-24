@@ -26,12 +26,12 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Navigate</h4>
             <div className="space-y-2">
-              <button 
-                onClick={() => scrollToSection('about')}
+              <a 
+                href="/about"
                 className="block text-muted-foreground hover:text-foreground transition-colors"
               >
                 About
-              </button>
+              </a>
               <button 
                 onClick={() => scrollToSection('writings')}
                 className="block text-muted-foreground hover:text-foreground transition-colors"
@@ -72,6 +72,14 @@ const Footer = () => {
                 className="block text-muted-foreground hover:text-foreground transition-colors"
               >
                 Topmate
+              </a>
+              <a 
+                href="https://github.com/adityaraj-singh" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-muted-foreground hover:text-foreground transition-colors"
+              >
+                GitHub
               </a>
               <a 
                 href="mailto:hello@adityaraj.dev"

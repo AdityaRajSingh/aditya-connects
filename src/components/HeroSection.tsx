@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import SparkleElement from './SparkleElement';
 
 const HeroSection = () => {
-  const scrollToConnect = () => {
-    document.getElementById('connect')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToJourney = () => {
+    document.getElementById('journey')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -39,11 +39,11 @@ const HeroSection = () => {
           </div>
           
           <Button 
-            onClick={scrollToConnect}
+            onClick={scrollToJourney}
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-medium hover-lift animate-scale-in"
           >
-            Let's Connect
+            My Journey
           </Button>
         </div>
       </div>

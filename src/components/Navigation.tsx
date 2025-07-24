@@ -32,7 +32,7 @@ const Navigation = () => {
           
           <div className="hidden md:flex items-center space-x-8">
             <button 
-              onClick={() => scrollToSection('about')}
+              onClick={() => navigate('/about')}
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               About
