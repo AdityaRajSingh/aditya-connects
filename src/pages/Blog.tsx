@@ -47,14 +47,15 @@ const Blog = () => {
             </div>
           </div>
 
-          {/* Blog Posts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {/* Blog Posts List */}
+          <div className="max-w-4xl mx-auto">
             {posts.map((post) => (
               <BlogCard
                 key={post.slug}
                 post={post}
                 onClick={() => handlePostClick(post.slug)}
                 showTags={true}
+                layout="horizontal"
               />
             ))}
           </div>
