@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import ThemeToggle from '@/components/ThemeToggle';
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -58,15 +57,12 @@ const Navigation = () => {
             </button>
           </div>
 
-          <div className="flex items-center space-x-4">
-            <ThemeToggle />
-            <Button 
-              onClick={() => scrollToSection('connect')}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
-              Let's Connect
-            </Button>
-          </div>
+          <Button 
+            onClick={() => scrollToSection('connect')}
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+          >
+            Let's Connect
+          </Button>
         </div>
       </div>
     </nav>
