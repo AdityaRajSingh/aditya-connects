@@ -44,7 +44,7 @@ const RecommendationsSection = () => {
             <Card key={index} className="hover-lift bg-card border-border">
               <CardContent className="p-6">
                 <div className={`w-12 h-12 rounded-full ${rec.gradient} flex items-center justify-center mb-4`}>
-                  <Quote className="w-6 h-6 text-white" />
+                  <Quote className="w-6 h-6 icon-contrast" />
                 </div>
                 
                 <blockquote className="text-muted-foreground mb-6 leading-relaxed">

@@ -154,6 +154,28 @@
     background: var(--gradient-soft);
   }
   
+  /* Component-specific gradients for icons */
+  .bg-gradient-teal {
+    background: linear-gradient(135deg, hsl(224, 45%, 44%), hsl(224, 75%, 70%));
+  }
+  
+  .bg-gradient-purple {
+    background: linear-gradient(135deg, hsl(224, 75%, 70%), hsl(220, 25%, 75%));
+  }
+  
+  .bg-gradient-warm {
+    background: linear-gradient(135deg, hsl(220, 25%, 75%), hsl(270, 25%, 93%));
+  }
+  
+  /* Icon colors with proper contrast for both modes */
+  .icon-contrast {
+    color: white;
+  }
+  
+  .dark .icon-contrast {
+    color: white;
+  }
+  
   /* Premium glow effects for dark mode */
   .glow-primary {
     box-shadow: 0 0 20px hsl(var(--primary) / 0.3);

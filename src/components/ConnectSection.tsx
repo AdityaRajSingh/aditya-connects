@@ -55,7 +55,7 @@ const ConnectSection = () => {
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
                   <div className={`w-12 h-12 rounded-full ${link.gradient} flex items-center justify-center`}>
-                    <link.icon className="w-6 h-6 text-white" />
+                    <link.icon className="w-6 h-6 icon-contrast" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">

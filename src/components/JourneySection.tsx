@@ -52,7 +52,7 @@ const JourneySection = () => {
               
               {/* Icon */}
               <div className={`flex-shrink-0 w-16 h-16 rounded-full ${milestone.color} flex items-center justify-center mr-8`}>
-                <milestone.icon className="w-8 h-8 text-white" />
+                <milestone.icon className="w-8 h-8 icon-contrast" />
               </div>
               
               {/* Content */}
