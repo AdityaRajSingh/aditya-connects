@@ -42,16 +42,14 @@ const JourneySection = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto relative">
+          {/* Continuous Timeline line */}
+          <div className="absolute left-8 top-8 w-0.5 bg-border z-0" style={{ height: `${(milestones.length - 1) * 96 + 32}px` }}></div>
+          
           {milestones.map((milestone, index) => (
             <div key={index} className="relative flex items-center mb-12 last:mb-0">
-              {/* Timeline line */}
-              {index < milestones.length - 1 && (
-                <div className="absolute left-8 top-20 w-0.5 h-20 bg-border"></div>
-              )}
-              
               {/* Icon */}
-              <div className={`flex-shrink-0 w-16 h-16 rounded-full ${milestone.color} flex items-center justify-center mr-8`}>
+              <div className={`flex-shrink-0 w-16 h-16 rounded-full ${milestone.color} flex items-center justify-center mr-8 relative z-10`}>
                 <milestone.icon className="w-8 h-8 text-white" />
               </div>
               
