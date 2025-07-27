@@ -17,7 +17,6 @@ export const blogPosts: BlogPost[] = [
     slug: "ai-revolution-developers-perspective", 
     date: "2024-12-15",
     excerpt: "Exploring how artificial intelligence is transforming software development and what it means for the future of our industry.",
-    heroImage: "/api/placeholder/800/400",
     tags: ["AI", "Development", "Technology"]
   },
   {
@@ -25,7 +24,6 @@ export const blogPosts: BlogPost[] = [
     slug: "google-to-startups-lessons",
     date: "2024-11-28", 
     excerpt: "Insights from navigating both big tech and startup environments, and the valuable lessons that shaped my career.",
-    heroImage: "/api/placeholder/800/400",
     tags: ["Career", "Google", "Startups", "Leadership"]
   },
   {
@@ -33,7 +31,6 @@ export const blogPosts: BlogPost[] = [
     slug: "art-of-problem-solving-tech",
     date: "2024-10-22",
     excerpt: "A deep dive into effective problem-solving strategies that have helped me tackle complex engineering challenges.", 
-    heroImage: "/api/placeholder/800/400",
     tags: ["Problem Solving", "Engineering", "Methodology"]
   },
   {
@@ -41,7 +38,6 @@ export const blogPosts: BlogPost[] = [
     slug: "building-scalable-react-applications",
     date: "2024-09-15",
     excerpt: "Best practices and architectural patterns for creating maintainable React applications that scale with your team.",
-    heroImage: "/api/placeholder/800/400", 
     tags: ["React", "Architecture", "Best Practices"]
   },
   {
@@ -49,7 +45,6 @@ export const blogPosts: BlogPost[] = [
     slug: "future-remote-work-tech",
     date: "2024-08-20",
     excerpt: "How remote work is reshaping the tech industry and what it means for developers, teams, and companies.",
-    heroImage: "/api/placeholder/800/400",
     tags: ["Remote Work", "Culture", "Technology"]
   },
   {
@@ -57,7 +52,6 @@ export const blogPosts: BlogPost[] = [
     slug: "lessons-building-technical-team",
     date: "2024-07-18",
     excerpt: "Key insights on hiring, managing, and scaling engineering teams in fast-growing startups.",
-    heroImage: "/api/placeholder/800/400",
     tags: ["Leadership", "Team Building", "Management"]
   }
 ];
