@@ -74,12 +74,12 @@ const Footer = () => {
                 Topmate
               </a>
               <a 
-                href="https://github.com/adityaraj-singh" 
+                href="https://twitter.com/adityaraj_singh" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-muted-foreground hover:text-foreground transition-colors"
               >
-                GitHub
+                Twitter
               </a>
               <a 
                 href="mailto:hello@adityaraj.dev"

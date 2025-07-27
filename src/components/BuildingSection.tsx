@@ -50,7 +50,7 @@ const BuildingSection = () => {
               
               <CardHeader>
                 <div className="flex items-center justify-between mb-3">
-                  <div className={`w-12 h-12 rounded-lg ${project.color} flex items-center justify-center`}>
+                  <div className="w-12 h-12 rounded-lg bg-gradient-teal flex items-center justify-center">
                     <project.icon className="w-6 h-6 icon-contrast" />
                   </div>
                   <span className="text-sm text-muted-foreground bg-muted px-3 py-1 rounded-full">

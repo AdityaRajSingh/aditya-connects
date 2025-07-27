@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Linkedin, Mail, Github, Calendar } from "lucide-react";
+import { Linkedin, Mail, Twitter, Calendar } from "lucide-react";
 
 const ConnectSection = () => {
   const socialLinks = [
@@ -20,11 +20,11 @@ const ConnectSection = () => {
       gradient: "bg-gradient-purple"
     },
     {
-      icon: Github,
-      label: "GitHub",
-      href: "#",
-      description: "Code repositories and projects",
-      gradient: "bg-gradient-warm"
+      icon: Twitter,
+      label: "Twitter",
+      href: "https://twitter.com/adityaraj_singh",
+      description: "Thoughts, updates, and tech insights",
+      gradient: "bg-gradient-teal"
     },
     {
       icon: Mail,
@@ -54,7 +54,7 @@ const ConnectSection = () => {
             <Card key={index} className="hover-lift bg-card border-border group">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
-                  <div className={`w-12 h-12 rounded-full ${link.gradient} flex items-center justify-center`}>
+                  <div className="w-12 h-12 rounded-full bg-gradient-teal flex items-center justify-center">
                     <link.icon className="w-6 h-6 icon-contrast" />
                   </div>
                   <div className="flex-1">
@@ -76,20 +76,6 @@ const ConnectSection = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-        
-        <div className="text-center mt-16">
-          <Card className="inline-block bg-card border-border">
-            <CardContent className="p-8">
-              <div className="flex items-center justify-center space-x-4 mb-4">
-                <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-                <span className="text-muted-foreground">Currently available for interesting conversations</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Response time: Usually within 24 hours
-              </p>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>

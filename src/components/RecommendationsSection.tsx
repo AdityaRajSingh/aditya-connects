@@ -43,7 +43,7 @@ const RecommendationsSection = () => {
           {recommendations.map((rec, index) => (
             <Card key={index} className="hover-lift bg-card border-border">
               <CardContent className="p-6">
-                <div className={`w-12 h-12 rounded-full ${rec.gradient} flex items-center justify-center mb-4`}>
+                <div className="w-12 h-12 rounded-full bg-gradient-teal flex items-center justify-center mb-4">
                   <Quote className="w-6 h-6 icon-contrast" />
                 </div>
                 
