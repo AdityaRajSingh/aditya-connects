@@ -20,7 +20,7 @@ const BlogCard = ({ post, onClick, showTags = false, layout = 'vertical' }: Blog
 
   if (layout === 'horizontal') {
     return (
-      <Card className="hover-lift cursor-pointer bg-card border-border group transition-all duration-300 mb-6">
+      <Card className="hover-lift cursor-pointer bg-card border-border group transition-all duration-300 mb-6" onClick={onClick}>
         <CardContent className="p-6">
           <div className="flex items-center justify-between">
             <div className="flex-1 min-w-0">
