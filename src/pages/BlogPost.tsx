@@ -7,7 +7,6 @@ import { getPostBySlug, formatDate, type BlogPost } from '@/lib/blog';
 import { ArrowLeft, Calendar, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import blogHeroPlaceholder from '@/assets/blog-hero-placeholder.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -115,11 +114,22 @@ The foundation is now in place for a fully-featured blog!
 
           {/* Hero Image */}
           <div className="aspect-video rounded-lg overflow-hidden mb-8 shadow-lg">
-            <img 
-              src={post.heroImage || blogHeroPlaceholder} 
-              alt={post.title}
-              className="w-full h-full object-cover"
-            />
+            {post.heroImage ? (
+              <img 
+                src={post.heroImage} 
+                alt={post.title}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-br from-primary/20 via-accent/30 to-secondary/20 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-teal flex items-center justify-center">
+                    <span className="text-2xl">📝</span>
+                  </div>
+                  <h2 className="text-2xl font-semibold text-foreground/80">{post.title}</h2>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Header */}
