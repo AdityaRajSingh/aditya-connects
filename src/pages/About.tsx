@@ -145,6 +145,45 @@ const About = () => {
         </div>
       </section>
 
+      {/* Interests Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
+              Beyond Code
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
+                <img 
+                  src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600&h=400&fit=crop&crop=faces" 
+                  alt="Travel adventure"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-xl font-semibold mb-2">Travel & Adventure</h3>
+                  <p className="text-sm text-white/90">Exploring new places, cultures, and experiences around the world.</p>
+                </div>
+              </div>
+              
+              <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
+                <img 
+                  src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=600&h=400&fit=crop&crop=faces" 
+                  alt="Nature and hiking"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-xl font-semibold mb-2">Nature & Hiking</h3>
+                  <p className="text-sm text-white/90">Finding peace and inspiration in the great outdoors.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
