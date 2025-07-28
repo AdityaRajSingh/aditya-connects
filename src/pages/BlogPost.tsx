@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ShareFooter from '@/components/ShareFooter';
-import { getPostBySlug, formatDate, type BlogPost } from '@/lib/blog';
+import { getPostBySlug, formatDate, getBlogIcon, type BlogPost } from '@/lib/blog';
 import { ArrowLeft, Calendar, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -124,7 +124,7 @@ The foundation is now in place for a fully-featured blog!
               <div className="w-full h-full bg-gradient-to-br from-primary/20 via-accent/30 to-secondary/20 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-teal flex items-center justify-center">
-                    <span className="text-2xl">📝</span>
+                    <span className="text-2xl">{getBlogIcon(post.title)}</span>
                   </div>
                   <h2 className="text-2xl font-semibold text-foreground/80">{post.title}</h2>
                 </div>

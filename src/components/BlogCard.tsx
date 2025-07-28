@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar } from "lucide-react";
-import { BlogPost, formatDate } from "@/lib/blog";
+import { BlogPost, formatDate, getBlogIcon } from "@/lib/blog";
 import { Badge } from "@/components/ui/badge";
 
 interface BlogCardProps {
@@ -12,11 +12,7 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ post, onClick, showTags = false, layout = 'vertical' }: BlogCardProps) => {
-  // Custom emoji-style icons for blog posts
-  const blogIcons = ['💡', '🚀', '⚡', '🎯', '🔮', '🌟', '📝', '🎨', '⭐', '🔥'];
-  
-  const iconIndex = Math.abs(post.title.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % blogIcons.length;
-  const selectedIcon = blogIcons[iconIndex];
+  const selectedIcon = getBlogIcon(post.title);
 
   if (layout === 'horizontal') {
     return (

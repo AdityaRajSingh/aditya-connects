@@ -10,6 +10,13 @@ export interface BlogPost {
   content?: string;
 }
 
+// Get consistent icon for a blog post based on its title
+export function getBlogIcon(title: string): string {
+  const blogIcons = ['💡', '🚀', '⚡', '🎯', '🔮', '🌟', '📝', '🎨', '⭐', '🔥'];
+  const iconIndex = Math.abs(title.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % blogIcons.length;
+  return blogIcons[iconIndex];
+}
+
 // Sample blog posts data
 export const blogPosts: BlogPost[] = [
   {
