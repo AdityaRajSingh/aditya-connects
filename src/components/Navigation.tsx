@@ -51,10 +51,10 @@ const Navigation = () => {
               Journey
             </button>
             <button 
-              onClick={() => scrollToSection('connect')}
+              onClick={() => scrollToSection('building')}
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Connect
+              Work
             </button>
           </div>
 
