@@ -113,7 +113,7 @@ The foundation is now in place for a fully-featured blog!
           </Button>
 
           {/* Hero Image */}
-          <div className="aspect-[3/1] rounded-lg overflow-hidden mb-8 shadow-lg">
+          <div className="h-48 rounded-lg overflow-hidden mb-8 shadow-lg">
             {post.heroImage ? (
               <img 
                 src={post.heroImage} 
