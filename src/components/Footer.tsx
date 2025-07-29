@@ -32,21 +32,27 @@ const Footer = () => {
               >
                 About
               </a>
-              <button 
-                onClick={() => scrollToSection('writings')}
+              <a 
+                href="/blog"
                 className="block text-muted-foreground hover:text-foreground transition-colors"
               >
-                Writings
-              </button>
+                Blog
+              </a>
               <button 
                 onClick={() => scrollToSection('journey')}
-                className="block text-muted-foreground hover:text-foreground transition-colors"
+                className="block text-muted-foreground hover:text-foreground transition-colors text-left"
               >
                 Journey
               </button>
               <button 
+                onClick={() => scrollToSection('building')}
+                className="block text-muted-foreground hover:text-foreground transition-colors text-left"
+              >
+                Work
+              </button>
+              <button 
                 onClick={() => scrollToSection('connect')}
-                className="block text-muted-foreground hover:text-foreground transition-colors"
+                className="block text-muted-foreground hover:text-foreground transition-colors text-left"
               >
                 Connect
               </button>
@@ -64,6 +70,14 @@ const Footer = () => {
                 className="block text-muted-foreground hover:text-foreground transition-colors"
               >
                 LinkedIn
+              </a>
+              <a 
+                href="https://github.com/adityaraj-singh" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-muted-foreground hover:text-foreground transition-colors"
+              >
+                GitHub
               </a>
               <a 
                 href="https://topmate.io/aditya_raj_singh" 
