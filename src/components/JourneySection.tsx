@@ -31,49 +31,77 @@ const JourneySection = () => {
   ];
 
   return (
-    <section id="journey" className="py-20 bg-muted">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+    <section id="journey" className="py-12 sm:py-16 lg:py-20 bg-muted">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             My Journey
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
             From college → startups → big tech → entrepreneurial ambitions. A story of continuous learning, risk-taking, and building.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           {milestones.map((milestone, index) => (
-            <div key={index} className="relative flex items-center mb-12 last:mb-0">
-              {/* Timeline line */}
-              {index < milestones.length - 1 && (
-                <div className="absolute left-8 top-20 w-0.5 h-20 bg-border"></div>
-              )}
-              
-              {/* Icon */}
-              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-teal flex items-center justify-center mr-8">
-                <milestone.icon className="w-8 h-8 icon-contrast" />
-              </div>
-              
-              {/* Content */}
-              <Card className="flex-1 hover-lift bg-card border-border">
-                <CardContent className="p-6">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-foreground mb-1">
-                        {milestone.title}
-                      </h3>
-                      <p className="text-primary font-medium">{milestone.role}</p>
+            <div key={index} className="relative mb-8 sm:mb-12 last:mb-0">
+              {/* Desktop Timeline Layout */}
+              <div className="hidden sm:flex items-center">
+                {/* Timeline line */}
+                {index < milestones.length - 1 && (
+                  <div className="absolute left-6 sm:left-8 top-16 sm:top-20 w-0.5 h-16 sm:h-20 bg-border"></div>
+                )}
+                
+                {/* Icon */}
+                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-teal flex items-center justify-center mr-4 sm:mr-8">
+                  <milestone.icon className="w-6 h-6 sm:w-8 sm:h-8 icon-contrast" />
+                </div>
+                
+                {/* Content */}
+                <Card className="flex-1 hover-lift bg-card border-border">
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                      <div>
+                        <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-1">
+                          {milestone.title}
+                        </h3>
+                        <p className="text-primary font-medium">{milestone.role}</p>
+                      </div>
+                      <div className="text-sm text-muted-foreground mt-2 lg:mt-0">
+                        {milestone.year}
+                      </div>
                     </div>
-                    <div className="text-sm text-muted-foreground mt-2 md:mt-0">
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                      {milestone.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Mobile Card Layout */}
+              <div className="sm:hidden">
+                <Card className="hover-lift bg-card border-border">
+                  <CardContent className="p-4">
+                    <div className="flex items-center mb-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-teal flex items-center justify-center mr-4">
+                        <milestone.icon className="w-6 h-6 icon-contrast" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-bold text-foreground mb-1">
+                          {milestone.title}
+                        </h3>
+                        <p className="text-primary font-medium text-sm">{milestone.role}</p>
+                      </div>
+                    </div>
+                    <div className="text-xs text-muted-foreground mb-3">
                       {milestone.year}
                     </div>
-                  </div>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {milestone.description}
-                  </p>
-                </CardContent>
-              </Card>
+                    <p className="text-muted-foreground leading-relaxed text-sm">
+                      {milestone.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           ))}
         </div>
