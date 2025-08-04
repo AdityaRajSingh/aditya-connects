@@ -9,11 +9,28 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 sm:pt-20">
-      {/* Animated sparkle elements - hidden on small screens for performance */}
-      <SparkleElement className="hidden sm:block top-1/4 left-1/4 text-accent" delay={0} />
-      <SparkleElement className="hidden sm:block top-1/3 right-1/4 text-primary" delay={1} />
-      <SparkleElement className="hidden sm:block bottom-1/3 left-1/3 text-accent" delay={2} />
-      <SparkleElement className="hidden sm:block bottom-1/4 right-1/3 text-primary" delay={0.5} />
+      {/* Enhanced multi-layered background system */}
+      <div className="absolute inset-0 bg-gradient-layered"></div>
+      <div className="absolute inset-0 bg-gradient-depth opacity-60"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-background/50 to-accent/8"></div>
+      <div className="absolute inset-0 bg-gradient-radial from-primary/15 via-transparent to-transparent opacity-40"></div>
+      
+      {/* Subtle texture overlay */}
+      <div className="absolute inset-0 opacity-[0.02] bg-gradient-to-br from-foreground via-transparent to-foreground"></div>
+      
+      {/* Animated sparkle elements - more stars for visual impact */}
+      <SparkleElement className="hidden sm:block top-1/6 left-1/5 text-accent" delay={0} />
+      <SparkleElement className="hidden sm:block top-1/4 right-1/6 text-primary" delay={1} />
+      <SparkleElement className="hidden sm:block top-1/3 left-1/3 text-accent/80" delay={2} />
+      <SparkleElement className="hidden sm:block bottom-1/3 right-1/4 text-primary" delay={0.5} />
+      <SparkleElement className="hidden sm:block bottom-1/4 left-1/4 text-accent" delay={1.5} />
+      <SparkleElement className="hidden sm:block top-2/3 right-1/3 text-primary/80" delay={3} />
+      <SparkleElement className="hidden sm:block top-1/2 left-1/6 text-accent/60" delay={2.5} />
+      <SparkleElement className="hidden sm:block bottom-1/6 right-1/5 text-primary/60" delay={4} />
+      
+      {/* Mobile sparkles - fewer for performance */}
+      <SparkleElement className="block sm:hidden top-1/4 left-1/4 text-accent" delay={0} />
+      <SparkleElement className="block sm:hidden bottom-1/3 right-1/4 text-primary" delay={1} />
       
       <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
         <div className="animate-fade-in">
@@ -48,10 +65,6 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20"></div>
-      </div>
     </section>
   );
 };
