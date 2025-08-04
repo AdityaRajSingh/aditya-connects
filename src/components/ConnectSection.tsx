@@ -36,16 +36,8 @@ const ConnectSection = () => {
   ];
 
   return (
-    <section id="connect" className="py-20 relative overflow-hidden">
-      {/* Enhanced multi-layered background system */}
-      <div className="absolute inset-0 bg-gradient-soft opacity-90"></div>
-      <div className="absolute inset-0 bg-gradient-to-tl from-primary/10 via-background/40 to-accent/6"></div>
-      <div className="absolute inset-0 bg-gradient-radial from-primary/12 via-transparent to-transparent opacity-60"></div>
-      
-      {/* Subtle texture overlay */}
-      <div className="absolute inset-0 opacity-[0.01] bg-gradient-to-bl from-foreground via-transparent to-foreground"></div>
-      
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="connect" className="py-20">
+      <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
             Let's Connect
