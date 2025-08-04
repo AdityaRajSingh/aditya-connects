@@ -11,19 +11,18 @@ const Footer = () => {
   return (
     <footer className="bg-background border-t border-border py-8 sm:py-12">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="space-y-6 sm:space-y-8">
-          {/* Brand */}
-          <div className="text-center sm:text-left">
-            <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">
-              Aditya Raj Singh
-            </h3>
-            <p className="text-muted-foreground text-sm sm:text-base">
-              Software Developer, Builder, and Lifelong Learner
-            </p>
-          </div>
-
-          {/* Navigation and Connect - Side by side on mobile */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-8">
+        <div className="space-y-6 sm:space-y-8 lg:space-y-0">
+          {/* All sections - Responsive layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {/* Brand */}
+            <div className="text-center sm:text-left lg:text-left col-span-1 sm:col-span-2 lg:col-span-1">
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">
+                Aditya Raj Singh
+              </h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Software Developer, Builder, and Lifelong Learner
+              </p>
+            </div>
             {/* Navigation */}
             <div>
               <h4 className="font-semibold text-foreground mb-3 sm:mb-4">Navigate</h4>
