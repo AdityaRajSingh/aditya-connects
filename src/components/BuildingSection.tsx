@@ -32,8 +32,17 @@ const BuildingSection = () => {
   ];
 
   return (
-    <section id="building" className="py-20">
-      <div className="container mx-auto px-6">
+    <section id="building" className="py-20 relative overflow-hidden">
+      {/* Enhanced multi-layered background system */}
+      <div className="absolute inset-0 bg-gradient-layered"></div>
+      <div className="absolute inset-0 bg-gradient-depth opacity-60"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-background/50 to-accent/8"></div>
+      <div className="absolute inset-0 bg-gradient-radial from-primary/15 via-transparent to-transparent opacity-40"></div>
+      
+      {/* Subtle texture overlay */}
+      <div className="absolute inset-0 opacity-[0.02] bg-gradient-to-br from-foreground via-transparent to-foreground"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             What I'm Building
