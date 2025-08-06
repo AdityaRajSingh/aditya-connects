@@ -33,14 +33,14 @@ const JourneySection = () => {
 
   return (
     <section id="journey" className="py-12 sm:py-16 lg:py-20 relative overflow-hidden">
-      {/* Hero-style layered background system */}
-      <div className="absolute inset-0 bg-gradient-layered"></div>
-      <div className="absolute inset-0 bg-gradient-depth opacity-60"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-background/50 to-accent/8"></div>
-      <div className="absolute inset-0 bg-gradient-radial from-primary/15 via-transparent to-transparent opacity-40"></div>
+      {/* Journey-style background system for alternating contrast */}
+      <div className="absolute inset-0 bg-gradient-journey"></div>
+      <div className="absolute inset-0 bg-gradient-journey-depth opacity-70"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-secondary/12 via-muted/40 to-accent/10"></div>
+      <div className="absolute inset-0 bg-gradient-radial from-secondary/20 via-transparent to-transparent opacity-50"></div>
       
-      {/* Subtle texture overlay */}
-      <div className="absolute inset-0 opacity-[0.02] bg-gradient-to-br from-foreground via-transparent to-foreground"></div>
+      {/* Enhanced texture overlay for contrast */}
+      <div className="absolute inset-0 opacity-[0.03] bg-gradient-to-br from-foreground via-transparent to-foreground"></div>
       
       {/* Animated sparkle elements */}
       <SparkleElement className="hidden sm:block top-[10%] left-[8%] text-accent" delay={0} />
