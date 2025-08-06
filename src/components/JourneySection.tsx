@@ -31,16 +31,8 @@ const JourneySection = () => {
   ];
 
   return (
-    <section id="journey" className="py-12 sm:py-16 lg:py-20 relative overflow-hidden">
-      {/* Enhanced multi-layered background system similar to hero */}
-      <div className="absolute inset-0 bg-gradient-accent opacity-80"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/12 via-background/30 to-primary/8"></div>
-      <div className="absolute inset-0 bg-gradient-radial from-accent/20 via-transparent to-transparent opacity-50"></div>
-      
-      {/* Subtle texture overlay */}
-      <div className="absolute inset-0 opacity-[0.015] bg-gradient-to-tr from-foreground via-transparent to-foreground"></div>
-      
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+    <section id="journey" className="py-12 sm:py-16 lg:py-20 bg-muted">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             My Journey
