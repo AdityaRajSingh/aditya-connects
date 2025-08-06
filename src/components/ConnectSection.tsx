@@ -38,13 +38,12 @@ const ConnectSection = () => {
   return (
     <section id="connect" className="py-20 relative overflow-hidden">
       {/* Enhanced multi-layered background system */}
-      <div className="absolute inset-0 bg-gradient-layered"></div>
-      <div className="absolute inset-0 bg-gradient-depth opacity-60"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-background/50 to-accent/8"></div>
-      <div className="absolute inset-0 bg-gradient-radial from-primary/15 via-transparent to-transparent opacity-40"></div>
+      <div className="absolute inset-0 bg-gradient-soft opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-primary/10 via-background/40 to-accent/6"></div>
+      <div className="absolute inset-0 bg-gradient-radial from-primary/12 via-transparent to-transparent opacity-60"></div>
       
       {/* Subtle texture overlay */}
-      <div className="absolute inset-0 opacity-[0.02] bg-gradient-to-br from-foreground via-transparent to-foreground"></div>
+      <div className="absolute inset-0 opacity-[0.01] bg-gradient-to-bl from-foreground via-transparent to-foreground"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
