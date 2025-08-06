@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Building, GraduationCap, Rocket } from "lucide-react";
+import SparkleElement from './SparkleElement';
 
 const JourneySection = () => {
   const milestones = [
@@ -31,8 +32,23 @@ const JourneySection = () => {
   ];
 
   return (
-    <section id="journey" className="py-12 sm:py-16 lg:py-20 bg-muted">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="journey" className="py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+      {/* Hero-style layered background system */}
+      <div className="absolute inset-0 bg-gradient-layered"></div>
+      <div className="absolute inset-0 bg-gradient-depth opacity-60"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-background/50 to-accent/8"></div>
+      <div className="absolute inset-0 bg-gradient-radial from-primary/15 via-transparent to-transparent opacity-40"></div>
+      
+      {/* Subtle texture overlay */}
+      <div className="absolute inset-0 opacity-[0.02] bg-gradient-to-br from-foreground via-transparent to-foreground"></div>
+      
+      {/* Animated sparkle elements */}
+      <SparkleElement className="hidden sm:block top-[10%] left-[8%] text-accent" delay={0} />
+      <SparkleElement className="hidden sm:block top-[85%] right-[10%] text-primary" delay={1} />
+      <SparkleElement className="hidden sm:block top-[30%] right-[15%] text-accent/80" delay={2} />
+      <SparkleElement className="hidden sm:block bottom-[10%] left-[20%] text-primary/80" delay={1.5} />
+      
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             My Journey
