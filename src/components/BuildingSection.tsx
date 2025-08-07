@@ -34,11 +34,8 @@ const BuildingSection = () => {
 
   return (
     <section id="building" className="py-20 relative overflow-hidden">
-      {/* Hero-style layered background system */}
-      <div className="absolute inset-0 bg-gradient-layered"></div>
-      <div className="absolute inset-0 bg-gradient-depth opacity-60"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-background/50 to-accent/8"></div>
-      <div className="absolute inset-0 bg-gradient-radial from-primary/15 via-transparent to-transparent opacity-40"></div>
+      {/* Innovation-focused background for building projects */}
+      <div className="absolute inset-0 bg-gradient-building"></div>
       
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 opacity-[0.02] bg-gradient-to-br from-foreground via-transparent to-foreground"></div>

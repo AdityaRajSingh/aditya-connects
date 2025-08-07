@@ -30,11 +30,8 @@ const RecommendationsSection = () => {
 
   return (
     <section className="py-20 relative overflow-hidden">
-      {/* Journey-style background system for alternating contrast */}
-      <div className="absolute inset-0 bg-gradient-journey"></div>
-      <div className="absolute inset-0 bg-gradient-journey-depth opacity-70"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-secondary/12 via-muted/40 to-accent/10"></div>
-      <div className="absolute inset-0 bg-gradient-radial from-secondary/20 via-transparent to-transparent opacity-50"></div>
+      {/* Testimonial-focused background for trust and warmth */}
+      <div className="absolute inset-0 bg-gradient-recommendations"></div>
       
       {/* Enhanced texture overlay for contrast */}
       <div className="absolute inset-0 opacity-[0.03] bg-gradient-to-br from-foreground via-transparent to-foreground"></div>
