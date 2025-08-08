@@ -9,7 +9,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-background border-t border-border py-8 sm:py-12">
+    <footer className="bg-gradient-to-t from-muted/30 to-background border-t border-border/50 py-8 sm:py-12">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="space-y-6 sm:space-y-8 lg:space-y-0">
           {/* All sections - Responsive layout */}
