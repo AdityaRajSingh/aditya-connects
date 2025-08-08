@@ -8,7 +8,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Enhanced multi-layered background system */}
       <div className="absolute inset-0 bg-gradient-layered"></div>
       <div className="absolute inset-0 bg-gradient-depth opacity-60"></div>

@@ -9,18 +9,18 @@ const Navigation = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      // Show header after scrolling 50px or when not on home page
-      setIsVisible(scrollTop > 50 || !isHomePage);
+      // Show background after scrolling 50px or when not on home page
+      setShowBackground(scrollTop > 50 || !isHomePage);
     };
 
-    // Show immediately if not on home page
+    // Show background immediately if not on home page
     if (!isHomePage) {
-      setIsVisible(true);
+      setShowBackground(true);
     }
 
     window.addEventListener('scroll', handleScroll);
@@ -49,12 +49,16 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
-      isVisible 
-        ? 'translate-y-0 opacity-100' 
-        : '-translate-y-full opacity-0'
-    } bg-gradient-to-r from-background/95 via-background/90 to-background/95 backdrop-blur-md border-b border-border/50 shadow-sm`}>
-      <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50">
+      {/* Background layer that fades in/out */}
+      <div className={`absolute inset-0 transition-opacity duration-500 ease-out ${
+        showBackground 
+          ? 'opacity-100' 
+          : 'opacity-0'
+      } bg-gradient-to-r from-background/95 via-background/90 to-background/95 backdrop-blur-md border-b border-border/50 shadow-sm`}></div>
+      
+      {/* Content layer - always visible */}
+      <div className="relative container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           <button 
             onClick={handleLogoClick}
