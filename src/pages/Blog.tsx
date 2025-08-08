@@ -23,7 +23,7 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <main className="pt-20">
+      <main className="pt-24">
         <div className="container mx-auto px-6 py-12">
           {/* Header */}
           <div className="mb-12">
