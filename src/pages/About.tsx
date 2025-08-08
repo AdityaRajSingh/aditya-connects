@@ -11,8 +11,8 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-20">
-        <div className="container mx-auto px-6">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Profile Photo */}
             <div className="flex justify-center lg:justify-start order-2 lg:order-1">
@@ -60,11 +60,11 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-6">What drives me</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+      <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">What drives me</h2>
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed px-2">
               Some core values and principles that guide my work and life decisions.
             </p>
           </div>
@@ -116,8 +116,8 @@ const About = () => {
       </section>
 
       {/* Background Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none space-y-6">
               <p className="text-muted-foreground leading-relaxed">
@@ -146,8 +146,8 @@ const About = () => {
       </section>
 
       {/* Interests Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
               Beyond Code
