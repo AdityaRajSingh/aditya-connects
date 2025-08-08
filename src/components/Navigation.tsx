@@ -14,20 +14,15 @@ const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      // Show background after scrolling 50px or when not on home page
-      setShowBackground(scrollTop > 50 || !isHomePage);
+      // Show background after scrolling 50px on all pages
+      setShowBackground(scrollTop > 50);
     };
-
-    // Show background immediately if not on home page
-    if (!isHomePage) {
-      setShowBackground(true);
-    }
 
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Check initial scroll position
     
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isHomePage]);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     if (isHomePage) {

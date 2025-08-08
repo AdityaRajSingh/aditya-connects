@@ -100,7 +100,7 @@ The foundation is now in place for a fully-featured blog!
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <main className="pt-24">
+      <main className="pt-20">
         <article className="container mx-auto px-6 py-12 max-w-4xl">
           {/* Back Button */}
           <Button 
