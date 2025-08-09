@@ -58,18 +58,18 @@ const JourneySection = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto relative">
+          {/* Vertical timeline behind icons (desktop) */}
+          <div aria-hidden className="hidden sm:block absolute left-6 sm:left-8 top-16 sm:top-20 bottom-16 sm:bottom-20 w-0.5 bg-foreground/15 dark:bg-foreground/25 pointer-events-none"></div>
           {milestones.map((milestone, index) => (
             <div key={index} className="relative mb-8 sm:mb-12 last:mb-0">
               {/* Desktop Timeline Layout */}
               <div className="hidden sm:flex items-center">
                 {/* Timeline line */}
-                {index < milestones.length - 1 && (
-                  <div className="absolute left-6 sm:left-8 top-16 sm:top-20 w-0.5 h-16 sm:h-20 bg-border"></div>
-                )}
+                {/* Timeline handled globally for smooth, continuous connection */}
                 
                 {/* Icon */}
-                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-teal flex items-center justify-center mr-4 sm:mr-8">
+                <div className="relative z-10 flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-teal flex items-center justify-center mr-4 sm:mr-8">
                   <milestone.icon className="w-6 h-6 sm:w-8 sm:h-8 icon-contrast" />
                 </div>
                 
