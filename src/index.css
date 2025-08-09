@@ -38,6 +38,13 @@
     --gradient-secondary: linear-gradient(135deg, hsl(224, 75%, 70%), hsl(220, 25%, 75%));
     --gradient-accent: linear-gradient(135deg, hsl(270, 25%, 93%), hsl(220, 25%, 75%));
     --gradient-soft: linear-gradient(135deg, hsl(270, 18%, 96%), hsl(270, 25%, 93%));
+
+    /* Hero (light mode) tokens */
+    --hero-light-1: 230 40% 97%;
+    --hero-light-2: 236 40% 96%;
+    --hero-light-3: 258 36% 95%;
+    /* Primary hue used for halo focus */
+    --hero-halo-primary: 224 65% 66%;
     
     /* Interactive states */
     --destructive: 0 65% 55%;
@@ -155,8 +162,15 @@
   }
   
   /* Advanced gradient utilities for hero section */
+  .bg-gradient-layered {
+    background:
+      radial-gradient(ellipse 900px 420px at 50% 45%, hsl(var(--hero-halo-primary, var(--primary)) / 0.18) 0%, hsl(var(--hero-halo-primary, var(--primary)) / 0.10) 25%, transparent 60%),
+      radial-gradient(ellipse 1200px 600px at 50% -10%, hsl(var(--primary) / 0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 1100px 550px at 50% 115%, hsl(var(--accent) / 0.10) 0%, transparent 60%),
+      linear-gradient(180deg, hsl(var(--hero-light-1)) 0%, hsl(var(--hero-light-2)) 50%, hsl(var(--hero-light-3)) 100%);
+  }
   .bg-gradient-radial {
-    background: radial-gradient(circle at center, var(--tw-gradient-stops));
+    background: radial-gradient(ellipse 60% 40% at 50% 45%, var(--tw-gradient-stops));
   }
   
   /* Enhanced light mode gradients with dramatic contrast */
@@ -204,6 +218,13 @@
     background: 
       radial-gradient(ellipse at top, hsl(var(--primary) / 0.25) 0%, transparent 50%),
       radial-gradient(ellipse at bottom, hsl(var(--accent) / 0.18) 0%, transparent 50%);
+  }
+
+  .dark .bg-gradient-layered {
+    background:
+      radial-gradient(ellipse 1200px 600px at 50% -10%, hsl(var(--primary) / 0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 1100px 550px at 50% 115%, hsl(var(--accent) / 0.14) 0%, transparent 60%),
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.12) 50%, hsl(var(--background)) 100%);
   }
   
   /* Dark mode building section - Innovation glow */
@@ -301,6 +322,10 @@
   
   .animate-sparkle {
     animation: sparkle 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 6px hsl(var(--primary) / 0.25));
+  }
+  .dark .animate-sparkle {
+    filter: drop-shadow(0 0 8px hsl(var(--accent) / 0.35));
   }
   
   /* Hover effects */
