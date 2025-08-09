@@ -201,20 +201,20 @@
   
   /* Journey style backgrounds for alternating sections */
   .bg-gradient-journey {
-    /* Section: Journey – mid-tone band for contrast from hero */
+    /* Light: Journey – hero-inspired, deeper mid-tone for separation */
     background:
-      radial-gradient(ellipse 85% 60% at 15% 30%, hsl(var(--accent) / 0.18) 0%, transparent 60%),
-      radial-gradient(ellipse 70% 50% at 85% 70%, hsl(var(--primary) / 0.12) 0%, transparent 60%),
-      linear-gradient(180deg, hsl(220 18% 88%) 0%, hsl(220 16% 86%) 50%, hsl(220 14% 84%) 100%);
+      radial-gradient(ellipse 900px 420px at 12% 25%, hsl(var(--primary) / 0.20) 0%, transparent 60%),
+      radial-gradient(ellipse 1000px 500px at 88% 75%, hsl(var(--accent) / 0.16) 0%, transparent 60%),
+      linear-gradient(180deg, hsl(var(--hero-light-2)) 0%, hsl(var(--hero-light-3)) 55%, hsl(220 22% 90%) 100%);
   }
   
   /* Recommendations section - Testimonial warmth */
   .bg-gradient-recommendations {
-    /* Section: Kind Words – variant of Journey with softer warmth */
+    /* Light: Kind Words – soft variant of Journey for testimonials */
     background:
-      linear-gradient(135deg, hsl(var(--muted) / 0.35) 0%, hsl(var(--muted) / 0.16) 35%, transparent 70%),
-      radial-gradient(ellipse 90% 65% at 60% 40%, hsl(var(--secondary) / 0.22) 0%, transparent 70%),
-      linear-gradient(180deg, hsl(220 22% 92%) 0%, hsl(220 18% 90%) 50%, hsl(270 20% 95%) 100%);
+      radial-gradient(ellipse 800px 380px at 50% 30%, hsl(var(--primary) / 0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 1000px 520px at 55% 80%, hsl(var(--accent) / 0.14) 0%, transparent 65%),
+      linear-gradient(180deg, hsl(var(--hero-light-3)) 0%, hsl(220 22% 92%) 55%, hsl(220 20% 90%) 100%);
   }
 
   /* Dark mode maintains existing rich gradients */
