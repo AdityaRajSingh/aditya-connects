@@ -183,34 +183,38 @@
   
   /* Building section - Innovation and creativity focus */
   .bg-gradient-building {
-    background: 
-      radial-gradient(ellipse 130% 90% at 30% 30%, hsl(var(--accent) / 0.4) 0%, hsl(var(--accent) / 0.12) 45%, transparent 75%),
-      radial-gradient(ellipse 110% 70% at 70% 70%, hsl(var(--primary) / 0.35) 0%, hsl(var(--primary) / 0.08) 55%, transparent 85%),
-      linear-gradient(165deg, hsl(220 25% 89%) 0%, hsl(220 20% 93%) 45%, hsl(270 20% 96%) 100%);
+    /* Section: Building – innovation glow mirroring hero */
+    background:
+      radial-gradient(ellipse 900px 420px at 50% 40%, hsl(var(--primary) / 0.18) 0%, hsl(var(--primary) / 0.08) 45%, transparent 70%),
+      radial-gradient(ellipse 1100px 550px at 50% 115%, hsl(var(--accent) / 0.10) 0%, transparent 65%),
+      linear-gradient(180deg, hsl(var(--hero-light-2)) 0%, hsl(var(--hero-light-3)) 60%, hsl(220 20% 92%) 100%);
   }
   
   /* Connect section - Warm and inviting */
   .bg-gradient-connect {
-    background: 
-      radial-gradient(ellipse 140% 85% at 70% 25%, hsl(var(--primary) / 0.38) 0%, hsl(var(--primary) / 0.10) 50%, transparent 80%),
-      radial-gradient(ellipse 120% 75% at 30% 75%, hsl(var(--accent) / 0.32) 0%, hsl(var(--accent) / 0.06) 60%, transparent 90%),
-      linear-gradient(200deg, hsl(220 28% 87%) 0%, hsl(220 22% 91%) 50%, hsl(270 18% 94%) 100%);
+    /* Section: Connect – CTA focus mirroring hero */
+    background:
+      radial-gradient(ellipse 800px 380px at 50% 30%, hsl(var(--primary) / 0.20) 0%, hsl(var(--primary) / 0.10) 45%, transparent 70%),
+      radial-gradient(ellipse 1000px 500px at 50% 115%, hsl(var(--accent) / 0.12) 0%, transparent 65%),
+      linear-gradient(200deg, hsl(220 26% 90%) 0%, hsl(220 22% 92%) 50%, hsl(270 18% 94%) 100%);
   }
   
   /* Journey style backgrounds for alternating sections */
   .bg-gradient-journey {
-    background: 
-      linear-gradient(135deg, hsl(var(--secondary) / 0.4) 0%, hsl(var(--secondary) / 0.15) 40%, transparent 70%),
-      radial-gradient(ellipse 80% 60% at 30% 30%, hsl(var(--accent) / 0.25) 0%, hsl(var(--accent) / 0.08) 60%, transparent 80%),
-      linear-gradient(180deg, hsl(220 20% 85%) 0%, hsl(220 15% 90%) 50%, hsl(220 10% 94%) 100%);
+    /* Section: Journey – mid-tone band for contrast from hero */
+    background:
+      radial-gradient(ellipse 85% 60% at 15% 30%, hsl(var(--accent) / 0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 50% at 85% 70%, hsl(var(--primary) / 0.12) 0%, transparent 60%),
+      linear-gradient(180deg, hsl(220 18% 88%) 0%, hsl(220 16% 86%) 50%, hsl(220 14% 84%) 100%);
   }
   
   /* Recommendations section - Testimonial warmth */
   .bg-gradient-recommendations {
-    background: 
-      linear-gradient(145deg, hsl(var(--muted) / 0.45) 0%, hsl(var(--muted) / 0.18) 35%, transparent 70%),
-      radial-gradient(ellipse 90% 65% at 60% 40%, hsl(var(--secondary) / 0.30) 0%, hsl(var(--secondary) / 0.08) 65%, transparent 85%),
-      linear-gradient(195deg, hsl(220 18% 86%) 0%, hsl(220 12% 91%) 45%, hsl(270 15% 95%) 100%);
+    /* Section: Kind Words – variant of Journey with softer warmth */
+    background:
+      linear-gradient(135deg, hsl(var(--muted) / 0.35) 0%, hsl(var(--muted) / 0.16) 35%, transparent 70%),
+      radial-gradient(ellipse 90% 65% at 60% 40%, hsl(var(--secondary) / 0.22) 0%, transparent 70%),
+      linear-gradient(180deg, hsl(220 22% 92%) 0%, hsl(220 18% 90%) 50%, hsl(270 20% 95%) 100%);
   }
 
   /* Dark mode maintains existing rich gradients */
@@ -229,34 +233,34 @@
   
   /* Dark mode building section - Innovation glow */
   .dark .bg-gradient-building {
-    background: 
-      radial-gradient(ellipse 130% 90% at 30% 30%, hsl(var(--accent) / 0.22) 0%, hsl(var(--accent) / 0.06) 45%, transparent 75%),
-      radial-gradient(ellipse 110% 70% at 70% 70%, hsl(var(--primary) / 0.18) 0%, hsl(var(--primary) / 0.04) 55%, transparent 85%),
-      linear-gradient(165deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.3) 45%, hsl(var(--card)) 100%);
+    background:
+      radial-gradient(ellipse 1000px 500px at 50% 35%, hsl(var(--primary) / 0.22) 0%, transparent 60%),
+      radial-gradient(ellipse 1100px 550px at 50% 115%, hsl(var(--accent) / 0.14) 0%, transparent 65%),
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.25) 55%, hsl(var(--card) / 0.9) 100%);
   }
   
   /* Dark mode connect section - Warm invitation */
   .dark .bg-gradient-connect {
-    background: 
-      radial-gradient(ellipse 140% 85% at 70% 25%, hsl(var(--primary) / 0.20) 0%, hsl(var(--primary) / 0.05) 50%, transparent 80%),
-      radial-gradient(ellipse 120% 75% at 30% 75%, hsl(var(--accent) / 0.16) 0%, hsl(var(--accent) / 0.03) 60%, transparent 90%),
-      linear-gradient(200deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.25) 50%, hsl(var(--card) / 0.8) 100%);
+    background:
+      radial-gradient(ellipse 900px 450px at 50% 28%, hsl(var(--primary) / 0.28) 0%, transparent 60%),
+      radial-gradient(ellipse 1100px 550px at 50% 115%, hsl(var(--accent) / 0.18) 0%, transparent 65%),
+      linear-gradient(200deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.35) 55%, hsl(var(--card) / 0.8) 100%);
   }
   
   /* Dark mode recommendations section - Testimonial depth */
   .dark .bg-gradient-recommendations {
-    background: 
-      linear-gradient(145deg, hsl(var(--muted) / 0.25) 0%, hsl(var(--muted) / 0.08) 35%, transparent 70%),
-      radial-gradient(ellipse 90% 65% at 60% 40%, hsl(var(--secondary) / 0.15) 0%, hsl(var(--secondary) / 0.04) 65%, transparent 85%),
-      linear-gradient(195deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.2) 45%, hsl(var(--card) / 0.7) 100%);
+    background:
+      linear-gradient(145deg, hsl(var(--muted) / 0.20) 0%, hsl(var(--muted) / 0.06) 35%, transparent 70%),
+      radial-gradient(ellipse 90% 65% at 60% 40%, hsl(var(--secondary) / 0.12) 0%, transparent 70%),
+      linear-gradient(195deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.25) 45%, hsl(var(--card) / 0.75) 100%);
   }
   
   /* Dark mode journey styles for alternating sections */
   .dark .bg-gradient-journey {
-    background: 
-      linear-gradient(135deg, hsl(var(--secondary) / 0.3) 0%, hsl(var(--secondary) / 0.1) 40%, transparent 70%),
-      radial-gradient(ellipse 80% 60% at 30% 30%, hsl(var(--accent) / 0.15) 0%, hsl(var(--accent) / 0.05) 60%, transparent 80%),
-      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.4) 50%, hsl(var(--card)) 100%);
+    background:
+      radial-gradient(ellipse 85% 60% at 15% 30%, hsl(var(--accent) / 0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 50% at 85% 70%, hsl(var(--primary) / 0.14) 0%, transparent 60%),
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.30) 55%, hsl(var(--card) / 0.85) 100%);
   }
   
   .dark .bg-gradient-journey-depth {
