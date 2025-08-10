@@ -37,7 +37,7 @@ const ConnectSection = () => {
   ];
 
   return (
-    <section id="connect" className="py-20 relative overflow-hidden">
+    <section id="connect" className="py-16 md:py-20 lg:py-24 relative overflow-hidden">
       {/* Warm, inviting background for connection */}
       <div className="absolute inset-0 bg-gradient-connect"></div>
       
@@ -50,8 +50,8 @@ const ConnectSection = () => {
       <SparkleElement className="hidden sm:block top-[50%] right-[8%] text-accent/80" delay={2} />
       <SparkleElement className="hidden sm:block bottom-[25%] left-[25%] text-primary/80" delay={1.5} />
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
+        <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
             Let's Connect
           </h2>
@@ -62,7 +62,7 @@ const ConnectSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-4xl mx-auto">
           {socialLinks.map((link, index) => (
             <Card key={index} className="hover-lift bg-card border-border group">
               <CardContent className="p-6">

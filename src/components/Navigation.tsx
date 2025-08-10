@@ -44,7 +44,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50">
+    <nav className="fixed top-0 left-0 right-0 z-50" aria-label="Main navigation">
       {/* Background layer that fades in/out */}
       <div className={`absolute inset-0 transition-opacity duration-500 ease-out ${
         showBackground 
@@ -57,7 +57,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <button 
             onClick={handleLogoClick}
-            className="text-lg sm:text-xl font-semibold text-foreground hover:text-primary transition-colors min-h-[44px] flex items-center"
+            className="text-lg sm:text-xl font-semibold text-foreground hover:text-primary transition-colors min-h-[44px] min-w-[44px] flex items-center"
+            aria-label="Go to home"
           >
             Aditya Raj Singh
           </button>
@@ -109,6 +110,8 @@ const Navigation = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 text-foreground hover:text-primary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -117,7 +120,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-gradient-to-b from-background/98 to-background/95 backdrop-blur-md border-b border-border/50 shadow-lg">
+          <div id="mobile-menu" role="menu" className="md:hidden absolute top-full left-0 right-0 bg-gradient-to-b from-background/98 to-background/95 backdrop-blur-md border-b border-border/50 shadow-lg">
             <div className="container mx-auto px-4 py-4 space-y-1">
               <button 
                 onClick={() => handleNavClick('/about')}

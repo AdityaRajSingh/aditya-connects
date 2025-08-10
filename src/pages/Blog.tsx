@@ -30,7 +30,7 @@ const Blog = () => {
       </Helmet>
       
       <main className="pt-20 bg-gradient-journey">
-        <div className="container mx-auto px-6 py-12">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-16">
           {/* Header */}
           <div className="mb-12">
             <Button 

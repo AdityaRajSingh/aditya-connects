@@ -32,7 +32,7 @@ const JourneySection = () => {
   ];
 
   return (
-    <section id="journey" className="py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+    <section id="journey" className="py-16 md:py-20 lg:py-24 relative overflow-hidden">
       {/* Journey-style background system for alternating contrast */}
       <div className="absolute inset-0 bg-gradient-journey"></div>
       <div className="absolute inset-0 bg-gradient-journey-depth opacity-70"></div>
@@ -48,8 +48,8 @@ const JourneySection = () => {
       <SparkleElement className="hidden sm:block top-[30%] right-[15%] text-accent/80" delay={2} />
       <SparkleElement className="hidden sm:block bottom-[10%] left-[20%] text-primary/80" delay={1.5} />
       
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="text-center mb-12 sm:mb-16">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
+        <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             My Journey
           </h2>
@@ -62,7 +62,7 @@ const JourneySection = () => {
           {/* Vertical timeline behind icons (desktop) */}
           <div aria-hidden className="hidden sm:block absolute left-6 sm:left-8 top-16 sm:top-20 bottom-16 sm:bottom-20 w-0.5 bg-foreground/15 dark:bg-foreground/25 pointer-events-none"></div>
           {milestones.map((milestone, index) => (
-            <div key={index} className="relative mb-8 sm:mb-12 last:mb-0">
+            <div key={index} className="relative mb-8 md:mb-12 lg:mb-16 last:mb-0">
               {/* Desktop Timeline Layout */}
               <div className="hidden sm:flex items-center">
                 {/* Timeline line */}
@@ -75,7 +75,7 @@ const JourneySection = () => {
                 
                 {/* Content */}
                 <Card className="flex-1 hover-lift bg-card border-border">
-                  <CardContent className="p-4 sm:p-6">
+                  <CardContent className="p-4 md:p-6">
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                       <div>
                         <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-1">

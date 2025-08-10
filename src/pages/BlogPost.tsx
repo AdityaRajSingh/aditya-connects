@@ -120,7 +120,7 @@ The foundation is now in place for a fully-featured blog!
       </Helmet>
       
       <main className="pt-20 bg-gradient-journey">
-        <article className="container mx-auto px-6 py-12 max-w-4xl">
+        <article className="container mx-auto px-4 sm:px-6 md:px-8 py-10 md:py-12 max-w-4xl">
           {/* Back Button */}
           <Button 
             variant="ghost" 
@@ -132,7 +132,7 @@ The foundation is now in place for a fully-featured blog!
           </Button>
 
           {/* Hero Image */}
-          <div className="h-48 rounded-lg overflow-hidden mb-8 shadow-lg">
+          <div className="h-40 sm:h-56 md:h-64 rounded-lg overflow-hidden mb-8 shadow-lg">
             {post.heroImage ? (
               <img 
                 src={post.heroImage} 

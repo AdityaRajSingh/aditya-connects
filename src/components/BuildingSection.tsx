@@ -33,7 +33,7 @@ const BuildingSection = () => {
   ];
 
   return (
-    <section id="building" className="py-20 relative overflow-hidden">
+    <section id="building" className="py-16 md:py-20 lg:py-24 relative overflow-hidden">
       {/* Innovation-focused background for building projects */}
       <div className="absolute inset-0 bg-gradient-building"></div>
       
@@ -46,8 +46,8 @@ const BuildingSection = () => {
       <SparkleElement className="hidden sm:block top-[45%] right-[25%] text-accent/80" delay={2} />
       <SparkleElement className="hidden sm:block bottom-[20%] left-[18%] text-primary/80" delay={1.5} />
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
+        <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             What I'm Building
           </h2>
@@ -56,7 +56,7 @@ const BuildingSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
           {projects.map((project, index) => (
             <Card key={index} className="hover-lift bg-card border-border group overflow-hidden">
               <div className={`h-2 ${project.color}`}></div>
