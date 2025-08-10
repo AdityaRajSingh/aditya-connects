@@ -6,7 +6,7 @@ import BlogCard from '@/components/BlogCard';
 import { getAllPosts } from '@/lib/blog';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
+import { Helmet } from 'react-helmet-async';
 const Blog = () => {
   const navigate = useNavigate();
   const posts = getAllPosts();
@@ -20,10 +20,16 @@ const Blog = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-soft">
       <Navigation />
       
-      <main className="pt-20">
+      <Helmet>
+        <title>All Notes – Blog | Aditya Raj Singh</title>
+        <meta name="description" content="Thoughts, insights, and learnings on AI, development, and career from Aditya Raj Singh." />
+        <link rel="canonical" href={window.location.origin + '/blog'} />
+      </Helmet>
+      
+      <main className="pt-20 bg-gradient-journey">
         <div className="container mx-auto px-6 py-12">
           {/* Header */}
           <div className="mb-12">

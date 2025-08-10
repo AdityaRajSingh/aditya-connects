@@ -7,7 +7,7 @@ import { getPostBySlug, formatDate, getBlogIcon, type BlogPost } from '@/lib/blo
 import { ArrowLeft, Calendar, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-
+import { Helmet } from 'react-helmet-async';
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -95,12 +95,31 @@ The foundation is now in place for a fully-featured blog!
   }
 
   const currentUrl = window.location.href;
+  const title = `${post.title} – Notes by Aditya Raj Singh`;
+  const description = post.excerpt;
+  const canonical = `${window.location.origin}/blog/${post.slug}`;
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    datePublished: post.date,
+    author: { "@type": "Person", name: "Aditya Raj Singh" },
+    description: post.excerpt,
+    url: canonical
+  };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-soft">
       <Navigation />
       
-      <main className="pt-20">
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonical} />
+        <script type="application/ld+json">{JSON.stringify(articleJsonLd)}</script>
+      </Helmet>
+      
+      <main className="pt-20 bg-gradient-journey">
         <article className="container mx-auto px-6 py-12 max-w-4xl">
           {/* Back Button */}
           <Button 
@@ -118,6 +137,7 @@ The foundation is now in place for a fully-featured blog!
               <img 
                 src={post.heroImage} 
                 alt={post.title}
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             ) : (

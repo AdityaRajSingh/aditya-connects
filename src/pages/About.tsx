@@ -3,15 +3,21 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from "@/components/ui/card";
 import profilePhoto from '@/assets/profile-photo.jpg';
-
+import { Helmet } from 'react-helmet-async';
 const About = () => {
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-soft">
       <Navigation />
       
+      <Helmet>
+        <title>About – Aditya Raj Singh | Software Engineer</title>
+        <meta name="description" content="About Aditya Raj Singh — Software Engineer at Google. 4+ years across startups and big tech. Builder, problem-solver, exploring AI." />
+        <link rel="canonical" href={window.location.origin + '/about'} />
+      </Helmet>
+      
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-layered pt-20">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Profile Photo */}
@@ -60,7 +66,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-muted/30">
+      <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-gradient-journey">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">What drives me</h2>
@@ -116,7 +122,7 @@ const About = () => {
       </section>
 
       {/* Background Section */}
-      <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-gradient-soft">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none space-y-6">
@@ -146,7 +152,7 @@ const About = () => {
       </section>
 
       {/* Interests Section */}
-      <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-muted/30">
+      <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-gradient-recommendations">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
@@ -158,6 +164,7 @@ const About = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600&h=400&fit=crop&crop=faces" 
                   alt="Travel adventure"
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -171,6 +178,7 @@ const About = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=600&h=400&fit=crop&crop=faces" 
                   alt="Nature and hiking"
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
