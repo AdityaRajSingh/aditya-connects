@@ -23,14 +23,14 @@ const ConnectSection = () => {
     {
       icon: Twitter,
       label: "Twitter",
-      href: "https://twitter.com/adityaraj_singh",
+      href: "https://x.com/adityaraj_ars",
       description: "Thoughts, updates, and tech insights",
       gradient: "bg-gradient-teal"
     },
     {
       icon: Mail,
       label: "Email",
-      href: "mailto:hello@adityaraj.dev",
+      href: "mailto:adi4adityaraj@gmail.com",
       description: "Direct message for collaborations",
       gradient: "bg-gradient-teal"
     }

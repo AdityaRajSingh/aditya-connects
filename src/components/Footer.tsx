@@ -73,7 +73,7 @@ const Footer = () => {
                   LinkedIn
                 </a>
                 <a 
-                  href="https://github.com/adityaraj-singh" 
+                  href="https://github.com/AdityaRajSingh" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block text-muted-foreground hover:text-foreground transition-colors py-1 text-sm sm:text-base min-h-[44px] sm:min-h-0 flex items-center sm:block"
@@ -89,7 +89,7 @@ const Footer = () => {
                   Topmate
                 </a>
                 <a 
-                  href="https://twitter.com/adityaraj_singh" 
+                  href="https://x.com/adityaraj_ars" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block text-muted-foreground hover:text-foreground transition-colors py-1 text-sm sm:text-base min-h-[44px] sm:min-h-0 flex items-center sm:block"
@@ -97,7 +97,7 @@ const Footer = () => {
                   Twitter
                 </a>
                 <a 
-                  href="mailto:hello@adityaraj.dev"
+                  href="mailto:adi4adityaraj@gmail.com"
                   className="block text-muted-foreground hover:text-foreground transition-colors py-1 text-sm sm:text-base min-h-[44px] sm:min-h-0 flex items-center sm:block"
                 >
                   Email
