@@ -80,8 +80,8 @@ const ConnectSection = () => {
                   </div>
                 </div>
                 <Button 
-                  variant="default" 
-                  className="w-full mt-4"
+                  variant="secondary" 
+                  className="w-full mt-4 hover:bg-primary hover:text-primary-foreground"
                   aria-label={`Connect via ${link.label}`}
                   onClick={() => window.open(link.href, '_blank')}
                 >
