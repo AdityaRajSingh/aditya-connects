@@ -57,7 +57,7 @@ const ConnectSection = () => {
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 rounded-full bg-gradient-teal flex items-center justify-center">
-                        <Icon className="w-6 h-6 icon-contrast" />
+                        <Icon className="w-6 h-6 icon-contrast" aria-hidden="true" />
                       </div>
                       <div className="flex-1">
                         <span className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">

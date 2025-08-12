@@ -113,8 +113,10 @@ The foundation is now in place for a fully-featured blog!
       <Navigation />
       
       <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>Aditya Raj Singh — Software Developer at Google</title>
+        <meta name="description" content="With four years spanning startups and big tech, I build products that scale and solve real problems. I thrive on learning, problem‑solving, and sharing ideas—currently exploring the frontiers of Artificial Intelligence." />
+        <meta property="og:description" content="With four years spanning startups and big tech, I build products that scale and solve real problems. I thrive on learning, problem‑solving, and sharing ideas—currently exploring the frontiers of Artificial Intelligence." />
+        <meta name="twitter:description" content="With four years spanning startups and big tech, I build products that scale and solve real problems. I thrive on learning, problem‑solving, and sharing ideas—currently exploring the frontiers of Artificial Intelligence." />
         <link rel="canonical" href={canonical} />
         <script type="application/ld+json">{JSON.stringify(articleJsonLd)}</script>
       </Helmet>
