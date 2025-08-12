@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import SparkleElement from './SparkleElement';
+import { siteContent } from '@/content/siteContent';
 
 const HeroSection = () => {
   const scrollToJourney = () => {
@@ -37,32 +38,26 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
         <div className="animate-fade-in">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
-            Hi. I'm{' '}
-            <span className="text-primary">Aditya</span>
-            <span className="text-accent">.</span>
+            {siteContent.hero.title}
           </h1>
           
           <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-foreground mb-6 sm:mb-8 animate-slide-up">
-            A{' '}
-            <span className="text-primary font-semibold">Software Developer</span>
-            <span className="text-accent">.</span>
+            <span>{siteContent.hero.subtitle}</span>
+            <span className="text-primary font-semibold"> · {siteContent.hero.kicker}</span>
           </h2>
           
           <div className="max-w-4xl mx-auto mb-8 sm:mb-12">
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed animate-slide-up px-2">
-              With four years at Google, I've navigated the worlds of big tech and startups, 
-              driven by a passion for solving complex problems. I thrive on building, learning, 
-              and sharing my journey in tech, AI, and life. Currently exploring the frontiers 
-              of Artificial Intelligence and its power to change our world.
+              {siteContent.hero.body}
             </p>
           </div>
           
-          <Button 
+          <Button
             onClick={scrollToJourney}
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-medium hover-lift animate-scale-in min-h-[48px] sm:min-h-[52px]"
           >
-            My Journey
+            {siteContent.hero.cta.label}
           </Button>
         </div>
       </div>
