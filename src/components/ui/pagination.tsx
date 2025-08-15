@@ -30,7 +30,7 @@ const PaginationItem = React.forwardRef<
   HTMLLIElement,
   React.ComponentProps<"li">
 >(({ className, ...props }, ref) => (
-  <li ref={ref} className={cn("", className)} {...props} />
+  <li ref={ref} className={cn(className)} {...props} />
 ))
 PaginationItem.displayName = "PaginationItem"
 
@@ -96,7 +96,7 @@ const PaginationEllipsis = ({
   ...props
 }: React.ComponentProps<"span">) => (
   <span
-    aria-hidden
+    aria-hidden={true}
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
