@@ -39,7 +39,7 @@ const RecommendationsSection = () => {
                   <Quote className="w-6 h-6 icon-contrast" />
                 </div>
                 <blockquote className="text-muted-foreground mb-6 leading-relaxed">
-                  " {q.quote} "
+                  "{q.quote}"
                 </blockquote>
                 <div className="border-t border-border pt-4">
                   <div className="font-semibold text-foreground">{q.author}</div>

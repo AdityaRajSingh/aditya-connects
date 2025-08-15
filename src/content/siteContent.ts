@@ -23,7 +23,7 @@ export const siteContent = {
     subtitleSuffix: '.',
 
     body:
-      "Currently at Google, I build and ship human-centered systems at scale. Across four years in startups and big tech, I’ve learned to move fast, balancing clean code, product thinking, and an entrepreneurial mindset. I’m a lifelong learner turning ideas into working software. Lately, I’m exploring how AI can multiply developer workflows and unlock new product experiences.",
+      "Currently at Google, I build human-centered systems at scale and solve problems that matter. With four years across startups and big tech, I move fast, blending clean code, product thinking, and an entrepreneurial mindset. A lifelong learner, I’m now exploring how AI can tackle complex challenges and create meaningful solutions for users.",
 
     cta: { label: 'My Journey', href: '#journey' },
   },
@@ -31,26 +31,26 @@ export const siteContent = {
   journey: {
     heading: "My Journey",
     subheading:
-      "From campus labs to startup chaos to global‑scale systems at Google—driven by curiosity, adaptability, and the thrill of building.",
+      "From campus beginnings to startup chaos and global-scale systems at Google. Driven by curiosity, adaptability, and the joy of building.",
     timeline: [
       {
         title: "Google",
         role: "Software Developer",
-        period: "2020 – Present",
+        period: "2024 – Present",
         body:
           "Working on large‑scale systems that touch millions, while exploring AI’s potential and honing a builder’s mindset for the next entrepreneurial leap."
       },
       {
         title: "Startup Journey",
         role: "Founding Engineer",
-        period: "2018",
+        period: "2021 - 2023",
         body:
-          "Built from zero to one—rapid iteration, many hats, and creating something from nothing. Learned resilience, adaptability, and product thinking."
+          "Built from zero to one, rapid iteration, many hats, and creating something from nothing. Learned resilience, adaptability, and product thinking."
       },
       {
         title: "Computer Science Engineering",
         role: "University Education",
-        period: "2015 – 2019",
+        period: "2017 – 2021",
         body:
           "Strengthened foundations in algorithms, systems, and software engineering. Discovered a passion for building solutions that matter."
       }
@@ -60,14 +60,14 @@ export const siteContent = {
   building: {
     heading: "What I’m Building",
     subheading:
-      "Where passion meets execution—current projects, experiments, and startup ideas.",
+      "Where passion meets execution: current projects, experiments, and startup ideas.",
     items: [
       {
-        title: "AI‑Powered Code Assistant",
+        title: "Smart AI Workflows",
         status: "In Development",
         body:
-          "An intelligent coding companion that blends AI with developer workflows for smarter, faster solutions.",
-        tech: ["Python", "OpenAI", "React"],
+          "Designing intelligent AI workflows that simplify day-to-day tasks, boost productivity, and give you back precious hours.",
+        tech: ["AI", "Automation", "Productivity"],
         icon: "code",
         color: "gradient-purple",
         links: {
@@ -75,65 +75,66 @@ export const siteContent = {
           demo: null
         }
       },
+      
       {
-        title: "Financial Markets Dashboard",
-        status: "Planning",
-        body:
-          "A real‑time dashboard to track markets, analyze portfolios, and surface investment insights.",
-        tech: ["Next.js", "D3.js", "APIs"],
+        title: "Mindful Companion",
+        status: "Conceptualizing",
+        body: "Your AI-powered partner for emotional well-being. Personalized insights and mindfulness practices to help you thrive",
+        tech: ["AI", "Mental Health", "Mindfulness"],
         icon: "lightbulb",
-        color: "gradient-teal",
+        color: "gradient-purple",
         links: {
           repo: null,
           demo: null
         }
       },
       {
-        title: "Travel & Photography Platform",
-        status: "Conceptualizing",
+        title: "AI-Powered Astrology",
+        status: "Planning",
         body:
-          "A hub for travelers and photographers to share stories, tips, and inspiration.",
-        tech: ["React", "Firebase", "Maps API"],
+          "A unique blend of ancient wisdom and modern AI, creating personalized astrological insights that resonate with today’s seekers.",
+        tech: ["AI", "Astrology", "Personal Development"],
         icon: "lightbulb",
-        color: "gradient-warm",
+        color: "gradient-purple",
         links: {
           repo: null,
           demo: null
         }
-      }
+      },
     ],
     cta: { label: "Let’s Build Together", href: "#connect" }
   },
 
   recommendations: {
     heading: "Kind Words",
-    subheading: "What peers and collaborators say about working with me.",
+    subheading: "Grateful for these kind words from people I've worked with.",
     quotes: [
       {
         quote:
-          "Aditya brings rare clarity and dedication to every project. His ability to simplify complexity is unmatched.",
-        author: "Sarah Chen",
-        role: "Senior Engineering Manager, Google"
+          "Aditya's ability to simplify complex concepts is impressive. He has a knack for making the technical accessible. His ability to communicate effectively with both technical and non-technical stakeholders is a huge asset.",
+        author: "Vaishali",
+        role: "Manager, Google"
       },
       {
         quote:
-          "His entrepreneurial drive and deep technical insight make him an inspiring partner to build with.",
-        author: "Michael Rodriguez",
-        role: "CTO, TechStart Inc."
+          "Aditya's three years of work with me showcased his remarkable curiosity and knack for grasping complex topics through insightful questioning. He's a smart worker, efficiently tackling challenges, a trait particularly valuable in a software developer.",
+        author: "Kedar Chandrayan",
+        role: "Co-Founder & Sr Director Engineering, TrueSparrow"
       },
       {
         quote:
-          "Aditya’s collaborative approach turns challenges into growth opportunities for the entire team.",
-        author: "Emily Johnson",
-        role: "Product Manager, Google"
-      }
+          "Aditya demonstrates exceptional teamwork abilities, making collaboration with him a pleasure. His engineering skills rank among the finest I've encountered.",
+        author: "Alpesh Modi",
+        role: "Director Engineering, TrueSparrow"
+      },
+      
     ]
   },
 
   connect: {
     heading: "Let’s Connect",
     body:
-      "Always up for a good conversation—brainstorming startup ideas, swapping AI experiments, or sharing travel stories.",
+      "Always open to meaningful conversations, whether it’s about startups, the tech industry, finance, AI experiments, life stories, learning, or travel adventures.",
     links: [
       {
         label: "LinkedIn",
@@ -148,12 +149,12 @@ export const siteContent = {
       {
         label: "Twitter",
         desc: "Thoughts, tech, and experiments",
-        href: "<TODO: twitter link>"
+        href: "https://x.com/adityarajsingh_"
       },
       {
         label: "Email",
         desc: "Let’s collaborate",
-        href: "mailto:<TODO: your@email>"
+        href: "mailto:adi4adityaraj@gmail.com"
       }
     ]
   },
@@ -184,7 +185,7 @@ export const siteContent = {
 
   footer: {
     name: "Aditya Raj Singh",
-    tagline: "Software Developer, Builder, and Lifelong Learner",
+    tagline: "Building, Solving & Learning Daily",
     socials: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/adityaraj-singh/" },
       { label: "GitHub", href: "https://github.com/AdityaRajSingh" },
@@ -225,4 +226,3 @@ export type BuildingItem = {
   color?: "gradient-purple" | "gradient-teal" | "gradient-warm";
   links?: { repo?: string | null; demo?: string | null };
 };
-
