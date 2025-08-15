@@ -75,7 +75,7 @@ export const siteContent = {
           demo: null
         }
       },
-      
+
       {
         title: "Mindful Companion",
         status: "Conceptualizing",
@@ -127,14 +127,14 @@ export const siteContent = {
         author: "Alpesh Modi",
         role: "Director Engineering, TrueSparrow"
       },
-      
+
     ]
   },
 
   connect: {
     heading: "Let’s Connect",
     body:
-      "Always open to meaningful conversations, whether it’s about startups, the tech industry, finance, AI experiments, life stories, learning, or travel adventures.",
+      "Always open to meaningful conversations, whether it's about startups, the tech industry, finance, AI experiments, life stories, learning, or travel adventures.",
     links: [
       {
         label: "LinkedIn",
@@ -153,27 +153,27 @@ export const siteContent = {
       },
       {
         label: "Email",
-        desc: "Let’s collaborate",
+        desc: "Let's collaborate",
         href: "mailto:adi4adityaraj@gmail.com"
       }
     ]
   },
 
   about: {
-    heading: "I’m Aditya.",
-    subheading:
-      "A software engineer at Google, building for scale while chasing entrepreneurial dreams.",
-    intro:
-      "Over the past four years, I’ve worked across startups and big tech—coding, designing, scaling, and learning. My work spans frontend, backend, and UX, all driven by one thread: solving meaningful problems. Today, I’m exploring AI’s transformative potential and laying the groundwork for new ventures.",
+    heading: "I'm Aditya.",
+    subheading: "Software Engineer at Google, scaling ideas with an entrepreneurial drive",
+    intro1: "Over the past four years I have worked in startups and big tech, in both remote and office settings. My experience spans frontend, backend and UX, always focused on solving meaningful problems and delivering impact.",
+    intro2: "I am currently exploring AI's potential to create transformative products and improve everyday life. With an entrepreneurial approach, I aim to turn ideas into practical, valuable solutions.",
     principlesHeading: "What Drives Me",
     principles: [
-      { title: "Build It", body: "Learn by creating. Ideas matter most when they’re real." },
-      { title: "Collaborate", body: "The best ideas emerge when diverse minds work together." },
-      { title: "Accessible Always", body: "Tech should empower the many, not the few." },
-      { title: "Keep Experimenting", body: "Every project is a chance to learn, pivot, or grow." }
+      { title: "Curiosity & Learning", body: "Always exploring, questioning, and growing through new experiences." },
+      { title: "Tech & AI", body: "Fascinated by technology’s potential to shape the future." },
+      { title: "Problem Solving", body: "Driven to untangle challenges and turn ideas into impactful solutions." },
+      { title: "Product Thinking", body: "Designing products with user needs at the forefront." }
     ],
-    narrative:
-      "Before product development, I cut my teeth writing for the web—even HTML emails. From pixel‑perfect layouts to systems at scale, I learned that great tech isn’t just code—it’s impact. Travel keeps me curious, sports keep me resilient, and finance & philosophy keep me reflective. Whether building in code or on paper, the goal is the same: create something that helps others and lasts.",
+    narrative1: "My first encounter with Java as a kid felt like magic. Watching a few lines of code perform what would take hours for a human sparked a deep curiosity. That drive to understand how things work led me to study Computer Science and Engineering, where I explored how computers think, how systems operate, and how software can shape the world. Programming quickly became my playground.",
+    narrative2: "While building my skills as an engineer, I became fascinated by why people choose one product over another. I wanted to understand users, their needs, and what makes a product truly work for them. This curiosity pushed me toward product thinking and entrepreneurship, experimenting with side projects and blending technology with real-world problems to create something meaningful.",
+    narrative3: "Beyond tech, I explore the world through travel, photography, and meeting new people. Sports keep me grounded, from weekly basketball games to following cricket. I stay active, dive into finance and economics, and often reflect on philosophy. Every experience, whether on the court, in a new city, or over a coffee, adds to how I see the world and the problems I want to solve.",
     beyondHeading: "Beyond Code",
     beyondBullets: [
       "Capturing landscapes through photography",
@@ -203,7 +203,7 @@ export const siteContent = {
     copyright: `© ${new Date().getFullYear()} Aditya Raj Singh. All rights reserved.`,
     builtWith: {
       textBefore: "Built with React and",
-      icon: "heart", // lucide-react <Heart />
+      icon: "heart", 
       textAfter: "for code"
     }
   }

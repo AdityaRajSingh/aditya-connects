@@ -30,7 +30,7 @@ const AboutSection = () => {
               {siteContent.about.subheading}
             </h3>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mb-8">
-              <p>{siteContent.about.intro}</p>
+              <p>{siteContent.about.intro1}</p>
             </div>
 
             <div className="mb-8">

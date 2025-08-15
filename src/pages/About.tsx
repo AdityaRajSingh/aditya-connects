@@ -46,18 +46,19 @@ const About = () => {
                 {about.subheading}
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mb-8">
-                <p>{about.intro}</p>
+                <p>{about.intro1}</p>
+                <p>{about.intro2}</p>
               </div>
               
               <div className="flex flex-wrap gap-3">
                 <div className="px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-medium">
-                  Google
+                  Learning
                 </div>
                 <div className="px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-medium">
-                  4+ Years
+                  Building
                 </div>
-                <div className="px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-medium">
-                  Remote
+                <div className="px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-medium">
+                  Growing
                 </div>
               </div>
             </div>
@@ -71,7 +72,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">{about.principlesHeading}</h2>
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed px-2">
-              Some core values and principles that guide my work and life decisions.
+              Some core values and principles that guide my work and life.
             </p>
           </div>
           
@@ -94,7 +95,10 @@ const About = () => {
         <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none space-y-6">
-              <p className="text-muted-foreground leading-relaxed">{about.narrative}</p>
+
+              <p className="text-muted-foreground leading-relaxed">{about.narrative1}</p>
+              <p className="text-muted-foreground leading-relaxed">{about.narrative2}</p>
+              <p className="text-muted-foreground leading-relaxed">{about.narrative3}</p>
             </div>
           </div>
         </div>
