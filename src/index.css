@@ -338,33 +338,33 @@
   }
 
   /* Rotating subtitle animation: slow, smooth crossfade + gentle float to match star motion */
-  .transition-subtitle {
-    opacity: 0;
-    transform: translateY(6px) scale(0.995);
-    animation-name: subtitle-fade;
-    animation-duration: 24s; /* total loop duration - slowed for a slow, elegant cycle */
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-    /* stagger each item by index via custom property --i */
-    /* Increase stagger so each item starts only after the previous has completed its fade-out */
-    animation-delay: calc(var(--i) * 8s);
-  }
+ .transition-subtitle {
+  opacity: 0;
+  transform: translateY(6px) scale(0.995);
+  animation-name: subtitle-fade;
+  animation-duration: 18s; /* reduced total loop duration */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  /* each subtitle gets 6s now instead of 8s */
+  animation-delay: calc(var(--i) * 6s);
+}
 
-  @keyframes subtitle-fade {
-    /*
-      Timeline (relative to animation-duration: 24s):
-      - 0% -> 6%   : subtle fade-in (fast but smooth)
-      - 6% -> 30%  : fully visible (longer, elegant pause)
-      - 30% -> 33.33%: gentle fade-out finishing before the next item starts
-      - 33.33% -> 100%: hidden until the next cycle for this item
-    */
-    0% { opacity: 0; transform: translateY(6px) scale(0.995); }
-    6% { opacity: 1; transform: translateY(0) scale(1); }
-    30% { opacity: 1; transform: translateY(0) scale(1); }
-    33.33% { opacity: 0; transform: translateY(-6px) scale(0.995); }
-    100% { opacity: 0; transform: translateY(-6px) scale(0.995); }
-  }
+@keyframes subtitle-fade {
+  /*
+    Timeline (relative to animation-duration / per item = 6s now):
+    - 0% -> 6%   : fade-in (smooth)
+    - 6% -> 30%  : fully visible (shorter pause by 2s total)
+    - 30% -> 33.33%: fade-out
+    - 33.33% -> 100%: hidden until next cycle
+  */
+  0% { opacity: 0; transform: translateY(6px) scale(0.995); }
+  6% { opacity: 1; transform: translateY(0) scale(1); }
+  30% { opacity: 1; transform: translateY(0) scale(1); }
+  33.33% { opacity: 0; transform: translateY(-6px) scale(0.995); }
+  100% { opacity: 0; transform: translateY(-6px) scale(0.995); }
+}
+
   
   .hover-lift:hover {
     transform: translateY(-4px);
