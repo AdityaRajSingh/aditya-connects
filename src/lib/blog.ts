@@ -39,27 +39,6 @@ export const blogPosts: BlogPost[] = [
     date: "2024-10-22",
     excerpt: "A deep dive into effective problem-solving strategies that have helped me tackle complex engineering challenges.", 
     tags: ["Problem Solving", "Engineering", "Methodology"]
-  },
-  {
-    title: "Building Scalable React Applications",
-    slug: "building-scalable-react-applications",
-    date: "2024-09-15",
-    excerpt: "Best practices and architectural patterns for creating maintainable React applications that scale with your team.",
-    tags: ["React", "Architecture", "Best Practices"]
-  },
-  {
-    title: "The Future of Remote Work in Tech",
-    slug: "future-remote-work-tech",
-    date: "2024-08-20",
-    excerpt: "How remote work is reshaping the tech industry and what it means for developers, teams, and companies.",
-    tags: ["Remote Work", "Culture", "Technology"]
-  },
-  {
-    title: "Lessons from Building a Technical Team",
-    slug: "lessons-building-technical-team",
-    date: "2024-07-18",
-    excerpt: "Key insights on hiring, managing, and scaling engineering teams in fast-growing startups.",
-    tags: ["Leadership", "Team Building", "Management"]
   }
 ];
 
