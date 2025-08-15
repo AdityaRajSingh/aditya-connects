@@ -338,32 +338,47 @@
   }
 
   /* Rotating subtitle animation: slow, smooth crossfade + gentle float to match star motion */
- .transition-subtitle {
+.transition-subtitle {
   opacity: 0;
-  transform: translateY(6px) scale(0.995);
-  animation-name: subtitle-fade;
-  animation-duration: 18s; /* reduced total loop duration */
+  transform: scale(0.995); /* start slightly smaller */
+  animation-name: subtitle-twinkle;
+  animation-duration: 18s; /* keep your reduced duration */
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
-  /* each subtitle gets 6s now instead of 8s */
-  animation-delay: calc(var(--i) * 6s);
+  animation-delay: calc(var(--i) * 6s); /* keep per-subtitle delay */
 }
 
-@keyframes subtitle-fade {
+@keyframes subtitle-twinkle {
   /*
-    Timeline (relative to animation-duration / per item = 6s now):
-    - 0% -> 6%   : fade-in (smooth)
+    Smooth twinkle effect:
+    - 0% -> 6%   : fade-in (smooth) Fade in while slightly scaling up (as if emerging from background)
     - 6% -> 30%  : fully visible (shorter pause by 2s total)
-    - 30% -> 33.33%: fade-out
+    - 30% -> 33.33%: Fade out while slightly scaling down (as if retreating into background)
     - 33.33% -> 100%: hidden until next cycle
   */
-  0% { opacity: 0; transform: translateY(6px) scale(0.995); }
-  6% { opacity: 1; transform: translateY(0) scale(1); }
-  30% { opacity: 1; transform: translateY(0) scale(1); }
-  33.33% { opacity: 0; transform: translateY(-6px) scale(0.995); }
-  100% { opacity: 0; transform: translateY(-6px) scale(0.995); }
+  0% {
+    opacity: 0;
+    transform: scale(0.995);
+  }
+  6% {
+    opacity: 1;
+    transform: scale(1); /* reach full size */
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1); /* stay steady */
+  }
+  33.33% {
+    opacity: 0;
+    transform: scale(0.995);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.995);
+  }
 }
+
 
   
   .hover-lift:hover {
