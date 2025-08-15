@@ -342,20 +342,20 @@
   opacity: 0;
   transform: scale(0.995); /* start slightly smaller */
   animation-name: subtitle-twinkle;
-  animation-duration: 18s; /* keep your reduced duration */
+  animation-duration: 18s; /* keep reduced total */
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
-  animation-delay: calc(var(--i) * 6s); /* keep per-subtitle delay */
+  animation-delay: calc(var(--i) * 6s); /* staggered per subtitle */
 }
 
 @keyframes subtitle-twinkle {
   /*
-    Smooth twinkle effect:
-    - 0% -> 6%   : fade-in (smooth) Fade in while slightly scaling up (as if emerging from background)
-    - 6% -> 30%  : fully visible (shorter pause by 2s total)
-    - 30% -> 33.33%: Fade out while slightly scaling down (as if retreating into background)
-    - 33.33% -> 100%: hidden until next cycle
+    Updated for equal fade-in and fade-out:
+    - 0% -> 6%   : Fade in (smooth scale up)
+    - 6% -> 27%  : Fully visible
+    - 27% -> 33% : Fade out (same duration as fade-in)
+    - 33% -> 100%: Hidden until next cycle
   */
   0% {
     opacity: 0;
@@ -363,13 +363,13 @@
   }
   6% {
     opacity: 1;
-    transform: scale(1); /* reach full size */
+    transform: scale(1);
   }
-  30% {
+  27% {
     opacity: 1;
-    transform: scale(1); /* stay steady */
+    transform: scale(1);
   }
-  33.33% {
+  33% {
     opacity: 0;
     transform: scale(0.995);
   }
@@ -378,6 +378,7 @@
     transform: scale(0.995);
   }
 }
+
 
 
   
