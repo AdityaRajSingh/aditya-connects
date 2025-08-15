@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider } from "next-themes";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
@@ -21,6 +22,13 @@ const App = () => (
       disableTransitionOnChange={false}
     >
       <TooltipProvider>
+        <Helmet>
+          <script
+            src="https://beamanalytics.b-cdn.net/beam.min.js"
+            data-token="87334760-0381-4938-bd77-82bf017858d0"
+            async
+          />
+        </Helmet>
         <Toaster />
         <Sonner />
         <BrowserRouter>
