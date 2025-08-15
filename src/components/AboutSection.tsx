@@ -49,7 +49,7 @@ const AboutSection = () => {
 
             <div className="mb-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                {siteContent.about.narrative}
+                {siteContent.about.narrative1}
               </p>
             </div>
 
