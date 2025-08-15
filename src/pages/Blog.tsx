@@ -20,7 +20,7 @@ const Blog = () => {
         <meta name="description" content="With four years spanning startups and big tech, I build products that scale and solve real problems. I thrive on learning, problem‑solving, and sharing ideas—currently exploring the frontiers of Artificial Intelligence." />
         <meta property="og:description" content="With four years spanning startups and big tech, I build products that scale and solve real problems. I thrive on learning, problem‑solving, and sharing ideas—currently exploring the frontiers of Artificial Intelligence." />
         <meta name="twitter:description" content="With four years spanning startups and big tech, I build products that scale and solve real problems. I thrive on learning, problem‑solving, and sharing ideas—currently exploring the frontiers of Artificial Intelligence." />
-        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.origin + '/blog' : '/blog'} />
+        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : 'https://singhadityaraj.github.io/aditya-connects/#/blog'} />
       </Helmet>
       
       <main className="pt-20 bg-gradient-journey">
