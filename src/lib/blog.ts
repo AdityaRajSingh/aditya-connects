@@ -21,10 +21,10 @@ export interface BlogPost {
 }
 
 // Import all markdown files
-const modules = import.meta.glob('/src/content/posts/*.md', { 
-  query: '?raw', 
-  import: 'default', 
-  eager: true 
+const modules = import.meta.glob('/src/content/posts/*.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true
 }) as Record<string, string>;
 
 // Cache
@@ -34,17 +34,17 @@ const htmlCache = new Map<string, string>();
 // Parse posts with validation
 function parsePosts(): BlogPost[] {
   if (postsCache) return postsCache;
-  
+
   const posts = Object.entries(modules)
     .map(([path, content]) => {
       try {
         const { data, content: markdownContent } = matter(content);
-        
+
         if (!data.title || !data.slug || !data.date) {
           console.warn(`Invalid frontmatter: ${path}`);
           return null;
         }
-        
+
         return {
           title: data.title,
           slug: data.slug,
@@ -61,22 +61,28 @@ function parsePosts(): BlogPost[] {
     })
     .filter((post): post is BlogPost => post !== null)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  
+
   postsCache = posts;
   return posts;
 }
 
 export const getAllPosts = () => parsePosts();
-export const getPostBySlug = (slug: string) => getAllPosts().find(p => p.slug === slug);
+export const getPostBySlug = (slug: string) => {
+  if (!slug || typeof slug !== 'string' || slug.length > 100) return undefined;
+  const sanitizedSlug = slug.replace(/[^a-zA-Z0-9-_]/g, '');
+  return getAllPosts().find(p => p.slug === sanitizedSlug);
+};
 export const getRecentPosts = (limit = 3) => getAllPosts().slice(0, limit);
 
 export function getPostContent(slug: string): string {
+  if (!slug || typeof slug !== 'string') return '';
+
   const cached = htmlCache.get(slug);
   if (cached) return cached;
-  
+
   const post = getPostBySlug(slug);
   if (!post?.content) return '';
-  
+
   const html = marked(post.content) as string;
   htmlCache.set(slug, html);
   return html;
@@ -88,7 +94,7 @@ export const getBlogIcon = (title: string) => {
   return icons[Math.abs(hash) % icons.length];
 };
 
-export const formatDate = (dateString: string) => 
+export const formatDate = (dateString: string) =>
   new Date(dateString).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',

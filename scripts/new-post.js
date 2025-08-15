@@ -45,6 +45,11 @@ Summarize your key takeaways and provide actionable insights.
 `;
 }
 
+function sanitizeForLog(input) {
+  if (typeof input !== 'string') return '';
+  return input.replace(/[\r\n\t]/g, ' ').substring(0, 200);
+}
+
 function main() {
   const title = process.argv[2];
   
@@ -59,7 +64,7 @@ function main() {
   const filepath = path.join(__dirname, '../src/content/posts', filename);
   
   if (fs.existsSync(filepath)) {
-    console.log(`❌ Post "${filename}" already exists!`);
+    console.log(`❌ Post "${sanitizeForLog(filename)}" already exists!`);
     process.exit(1);
   }
   
@@ -70,14 +75,14 @@ function main() {
     fs.writeFileSync(filepath, template);
     
     console.log('\n✅ Blog post created successfully!');
-    console.log(`📄 File: src/content/posts/${filename}`);
-    console.log(`🔗 URL: /blog/${slug}`);
+    console.log(`📄 File: src/content/posts/${sanitizeForLog(filename)}`);
+    console.log(`🔗 URL: /blog/${sanitizeForLog(slug)}`);
     console.log('\n📝 Next steps:');
     console.log('1. Edit the frontmatter (excerpt, tags, heroImage)');
     console.log('2. Write your content in Markdown');
     console.log('3. The post will automatically appear in your blog!');
   } catch (error) {
-    console.error('❌ Error creating post:', error.message);
+    console.error('❌ Error creating post:', sanitizeForLog(error.message));
     process.exit(1);
   }
 }

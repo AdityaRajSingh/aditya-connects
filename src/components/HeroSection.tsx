@@ -15,10 +15,10 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-depth opacity-60"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-background/50 to-accent/8"></div>
       <div className="absolute inset-0 bg-gradient-radial from-primary/15 via-transparent to-transparent opacity-40"></div>
-      
+
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 opacity-[0.02] bg-gradient-to-br from-foreground via-transparent to-foreground"></div>
-      
+
       {/* Animated sparkle elements - positioned to avoid text overlap */}
       <SparkleElement className="hidden sm:block top-[15%] left-[8%] text-accent" delay={0} />
       <SparkleElement className="hidden sm:block top-[12%] right-[10%] text-primary" delay={1} />
@@ -30,11 +30,11 @@ const HeroSection = () => {
       <SparkleElement className="hidden sm:block bottom-[12%] right-[15%] text-primary/60" delay={4} />
       <SparkleElement className="hidden sm:block top-[80%] right-[30%] text-accent/70" delay={3.5} />
       <SparkleElement className="hidden sm:block top-[18%] left-[35%] text-primary/50" delay={5} />
-      
+
       {/* Mobile sparkles - fewer for performance, positioned at edges */}
       <SparkleElement className="block sm:hidden top-[15%] left-[10%] text-accent" delay={0} />
       <SparkleElement className="block sm:hidden bottom-[20%] right-[10%] text-primary" delay={1} />
-      
+
       <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
         <div className="animate-fade-in">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
@@ -52,25 +52,25 @@ const HeroSection = () => {
               </span>
 
               <div className="absolute inset-0 flex items-center justify-center">
-                {siteContent.hero.subtitleVariants?.map((s, i) => (
-                  <div
-                    key={i}
-                    className="absolute left-0 right-0 text-center whitespace-normal transition-subtitle"
-                    style={{ ['--i' as any]: i }}
-                    // render HTML so the inner span classes are preserved
-                    dangerouslySetInnerHTML={{ __html: s }}
-                  />
-                ))}
+                <div className="absolute left-0 right-0 text-center whitespace-normal transition-subtitle" style={{ ['--i' as any]: 0 }}>
+                  A <span className="text-primary font-semibold">Software Developer</span>
+                </div>
+                <div className="absolute left-0 right-0 text-center whitespace-normal transition-subtitle" style={{ ['--i' as any]: 1 }}>
+                  Entrepreneurial Mindset
+                </div>
+                <div className="absolute left-0 right-0 text-center whitespace-normal transition-subtitle" style={{ ['--i' as any]: 2 }}>
+                  Driven by <span className="text-primary font-semibold">AI & Curiosity</span>
+                </div>
               </div>
             </div>
           </h2>
-          
+
           <div className="max-w-4xl mx-auto mb-8 sm:mb-12">
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed animate-slide-up px-2">
               {siteContent.hero.body}
             </p>
           </div>
-          
+
           <Button
             onClick={scrollToJourney}
             size="lg"
@@ -80,7 +80,7 @@ const HeroSection = () => {
           </Button>
         </div>
       </div>
-      
+
     </section>
   );
 };
