@@ -23,7 +23,7 @@ export const siteContent = {
     subtitleSuffix: '.',
 
     body:
-      "With four years at Google, I've navigated the worlds of big tech and startups, driven by a passion for solving complex problems. I thrive on building, learning, and sharing my journey in tech, AI, and life. Currently exploring the frontiers of Artificial Intelligence and its power to change our world.",
+      "Currently at Google, I build and ship human-centered systems at scale. Across four years in startups and big tech, I’ve learned to move fast, balancing clean code, product thinking, and an entrepreneurial mindset. I’m a lifelong learner turning ideas into working software. Lately, I’m exploring how AI can multiply developer workflows and unlock new product experiences.",
 
     cta: { label: 'My Journey', href: '#journey' },
   },

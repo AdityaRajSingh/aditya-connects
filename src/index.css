@@ -338,46 +338,52 @@
   }
 
   /* Rotating subtitle animation: slow, smooth crossfade + gentle float to match star motion */
+/* Rotating subtitle animation: smooth crossfade + subtle glow pulse */
 .transition-subtitle {
   opacity: 0;
   transform: scale(0.995); /* start slightly smaller */
+  text-shadow: 0 0 0px rgba(255, 255, 255, 0); /* start with no glow */
   animation-name: subtitle-twinkle;
-  animation-duration: 18s; /* keep reduced total */
+  animation-duration: 18s; /* your reduced duration */
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
-  animation-delay: calc(var(--i) * 6s); /* staggered per subtitle */
+  animation-delay: calc(var(--i) * 6s);
 }
 
 @keyframes subtitle-twinkle {
-  /*
-    Updated for equal fade-in and fade-out:
-    - 0% -> 6%   : Fade in (smooth scale up)
-    - 6% -> 27%  : Fully visible
-    - 27% -> 33% : Fade out (same duration as fade-in)
-    - 33% -> 100%: Hidden until next cycle
+  /* 
+    Glow increases with fade-in, holds steady, then gently fades out
+    to match the elegance of background stars.
   */
   0% {
     opacity: 0;
     transform: scale(0.995);
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
   }
   6% {
     opacity: 1;
     transform: scale(1);
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.4);
   }
   27% {
     opacity: 1;
     transform: scale(1);
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.4);
   }
-  33% {
+  33.33% {
     opacity: 0;
     transform: scale(0.995);
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
   }
   100% {
     opacity: 0;
     transform: scale(0.995);
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
   }
 }
+
+
 
 
 
