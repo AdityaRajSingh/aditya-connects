@@ -1,32 +1,26 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
-import { getAllPosts } from '@/lib/blog';
-import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Helmet } from 'react-helmet-async';
+import { useBlogPosts } from '@/hooks/useBlog';
 const Blog = () => {
   const navigate = useNavigate();
-  const posts = getAllPosts();
-
-  const handlePostClick = (slug: string) => {
-    navigate(`/blog/${slug}`);
-  };
-
-  const handleBackToHome = () => {
-    navigate('/');
-  };
+  const posts = useBlogPosts();
 
   return (
     <div className="min-h-screen bg-gradient-soft">
       <Navigation />
       
       <Helmet>
-        <title>All Notes – Blog | Aditya Raj Singh</title>
-        <meta name="description" content="Thoughts, insights, and learnings on AI, development, and career from Aditya Raj Singh." />
-        <link rel="canonical" href={window.location.origin + '/blog'} />
+        <title>Aditya Raj Singh — Software Developer at Google</title>
+        <meta name="description" content="With four years spanning startups and big tech, I build products that scale and solve real problems. I thrive on learning, problem‑solving, and sharing ideas—currently exploring the frontiers of Artificial Intelligence." />
+        <meta property="og:description" content="With four years spanning startups and big tech, I build products that scale and solve real problems. I thrive on learning, problem‑solving, and sharing ideas—currently exploring the frontiers of Artificial Intelligence." />
+        <meta name="twitter:description" content="With four years spanning startups and big tech, I build products that scale and solve real problems. I thrive on learning, problem‑solving, and sharing ideas—currently exploring the frontiers of Artificial Intelligence." />
+        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.origin + '/blog' : '/blog'} />
       </Helmet>
       
       <main className="pt-20 bg-gradient-journey">
@@ -35,7 +29,7 @@ const Blog = () => {
           <div className="mb-12">
             <Button 
               variant="ghost" 
-              onClick={handleBackToHome}
+              onClick={() => navigate('/')}
               className="mb-6 hover:bg-accent/50"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -55,15 +49,21 @@ const Blog = () => {
 
           {/* Blog Posts List */}
           <div className="max-w-4xl mx-auto">
-            {posts.map((post) => (
-              <BlogCard
-                key={post.slug}
-                post={post}
-                onClick={() => handlePostClick(post.slug)}
-                showTags={true}
-                layout="horizontal"
-              />
-            ))}
+            {posts.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-muted-foreground text-lg">No blog posts found.</p>
+              </div>
+            ) : (
+              posts.map((post) => (
+                <BlogCard
+                  key={post.slug}
+                  post={post}
+                  onClick={() => navigate(`/blog/${post.slug}`)}
+                  showTags
+                  layout="horizontal"
+                />
+              ))
+            )}
           </div>
 
           {/* Load More (Future Enhancement) */}

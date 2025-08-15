@@ -1,3 +1,4 @@
+import { siteContent } from "@/content/siteContent";
 import React from 'react';
 import { Card } from "@/components/ui/card";
 import profilePhoto from '@/assets/profile-photo.jpg';
@@ -23,44 +24,54 @@ const AboutSection = () => {
           {/* About Content */}
           <div className="animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
-              About Me
+              {siteContent.about.heading}
             </h2>
-            
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-              <p>
-                I'm a <span className="text-primary font-medium">problem-solver</span> and 
-                an <span className="text-primary font-medium">entrepreneur at heart</span>. 
-                My interests are eclectic, from building new products and diving into 
-                financial markets to traveling the world and capturing moments through photography.
+            <h3 className="text-xl text-muted-foreground mb-4">
+              {siteContent.about.subheading}
+            </h3>
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mb-8">
+              <p>{siteContent.about.intro1}</p>
+            </div>
+
+            <div className="mb-8">
+              <h4 className="text-2xl font-semibold text-foreground mb-4">
+                {siteContent.about.principlesHeading}
+              </h4>
+              <ul className="space-y-4">
+                {siteContent.about.principles.map((item) => (
+                  <li key={item.title}>
+                    <span className="font-bold text-primary">{item.title}</span>
+                    <span className="ml-2 text-muted-foreground">{item.body}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mb-8">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                {siteContent.about.narrative1}
               </p>
-              
-              <p>
-                I believe in the power of sharing knowledge and am always open to discussing 
-                everything from career paths and startup ideas to life lessons and the latest 
-                in sports. This space is a reflection of my journey and the things I've learned 
-                along the way.
-              </p>
-              
-              <p>
-                Currently, I'm fascinated by the potential of <span className="text-accent font-medium">
-                Artificial Intelligence</span> and spend my time experimenting with new use cases 
-                and building products that leverage AI to solve real-world problems.
-              </p>
+            </div>
+
+            <div className="mb-8">
+              <h4 className="text-xl font-semibold text-foreground mb-2">
+                {siteContent.about.beyondHeading}
+              </h4>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                {siteContent.about.beyondBullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
             </div>
             
             <div className="mt-8 flex flex-wrap gap-4">
-              <div className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Building
-              </div>
-              <div className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                Learning
-              </div>
-              <div className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Traveling
-              </div>
-              <div className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                Photography
-              </div>
+              {siteContent.about.tags.map((tag, index) => (
+                <div key={tag} className={`px-4 py-2 rounded-full text-sm font-medium ${
+                  index % 2 === 0 ? 'bg-primary/10 text-primary' : 'bg-accent/10 text-accent'
+                }`}>
+                  {tag}
+                </div>
+              ))}
             </div>
           </div>
         </div>

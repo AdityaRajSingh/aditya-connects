@@ -1,8 +1,9 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar } from "lucide-react";
-import { BlogPost, formatDate, getBlogIcon } from "@/lib/blog";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { BlogPost, formatDate, getBlogIcon } from "@/lib/blog";
+import { getBlogHeroImage } from "@/lib/imageUtils";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -12,7 +13,7 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ post, onClick, showTags = false, layout = 'vertical' }: BlogCardProps) => {
-  const selectedIcon = getBlogIcon(post.title);
+  const icon = getBlogIcon(post.title);
 
   if (layout === 'horizontal') {
     return (
@@ -31,7 +32,7 @@ const BlogCard = ({ post, onClick, showTags = false, layout = 'vertical' }: Blog
                   <Calendar className="w-4 h-4" />
                   {formatDate(post.date)}
                 </div>
-                {showTags && post.tags && post.tags.length > 0 && (
+                {showTags && post.tags.length > 0 && (
                   <div className="flex flex-wrap gap-2">
                     {post.tags.slice(0, 2).map((tag) => (
                       <Badge key={tag} variant="secondary" className="text-xs">
@@ -44,7 +45,7 @@ const BlogCard = ({ post, onClick, showTags = false, layout = 'vertical' }: Blog
             </div>
             
             <div className="w-14 h-14 rounded-full bg-gradient-teal flex items-center justify-center ml-6 flex-shrink-0 group-hover:scale-110 transition-transform">
-              <span className="text-2xl">{selectedIcon}</span>
+              <span className="text-2xl">{icon}</span>
             </div>
           </div>
         </CardContent>
@@ -71,12 +72,19 @@ const BlogCard = ({ post, onClick, showTags = false, layout = 'vertical' }: Blog
     >
       <div className={`h-2 ${gradientClass}`}></div>
       
-      {post.heroImage && (
+      {getBlogHeroImage(post.heroImage) && (
         <div className="aspect-video overflow-hidden">
           <img 
-            src={post.heroImage} 
+            src={getBlogHeroImage(post.heroImage)!} 
             alt={post.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            onError={(e) => {
+              const target = e.target as HTMLElement;
+              const parent = target.parentElement;
+              if (parent) {
+                parent.style.display = 'none';
+              }
+            }}
           />
         </div>
       )}
@@ -91,7 +99,7 @@ const BlogCard = ({ post, onClick, showTags = false, layout = 'vertical' }: Blog
           {post.title}
         </CardTitle>
         
-        {showTags && post.tags && post.tags.length > 0 && (
+        {showTags && post.tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mt-3">
             {post.tags.slice(0, 3).map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
@@ -108,7 +116,7 @@ const BlogCard = ({ post, onClick, showTags = false, layout = 'vertical' }: Blog
         </p>
         
         <div className="flex items-center text-primary font-medium group-hover:text-accent transition-colors">
-          <span className="text-lg mr-2">{selectedIcon}</span>
+          <span className="text-lg mr-2">{icon}</span>
           Read More
         </div>
       </CardContent>

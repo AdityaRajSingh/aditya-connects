@@ -2,34 +2,20 @@ import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Building, GraduationCap, Rocket } from "lucide-react";
 import SparkleElement from './SparkleElement';
+import { siteContent } from '@/content/siteContent';
 
 const JourneySection = () => {
-  const milestones = [
-    {
-      year: "2020 - Present",
-      title: "Google",
-      role: "Software Developer",
-      description: "Embracing the scale and complexity of big tech while exploring AI frontiers. Building systems that impact millions while nurturing entrepreneurial ambitions and preparing for the next leap.",
-      icon: Building,
-      color: "bg-gradient-teal"
-    },
-    {
-      year: "2019",
-      title: "Startup Journey",
-      role: "Founding Engineer",
-      description: "Dove into the startup world to experience building from zero to one. Learned the art of rapid iteration, wearing multiple hats, and the thrill of creating something new. This experience ignited my entrepreneurial spirit.",
-      icon: Rocket,
-      color: "bg-gradient-purple"
-    },
-    {
-      year: "2016 - 2019",
-      title: "Computer Science Engineering",
-      role: "University Education",
-      description: "Built the foundation with algorithms, data structures, and engineering principles. More importantly, developed a problem-solving mindset and discovered my passion for building technology that matters.",
-      icon: GraduationCap,
-      color: "bg-gradient-warm"
-    }
-  ];
+  // Map timeline data to milestone cards, preserving icons and colors
+  const timelineIcons = [Building, Rocket, GraduationCap];
+  const timelineColors = ["bg-gradient-teal", "bg-gradient-purple", "bg-gradient-warm"];
+  const milestones = siteContent.journey.timeline.map((item, idx) => ({
+    year: item.period,
+    title: item.title,
+    role: item.role,
+    description: item.body,
+    icon: timelineIcons[idx] || Building,
+    color: timelineColors[idx] || "bg-gradient-teal"
+  }));
 
   return (
     <section id="journey" className="py-16 md:py-20 lg:py-24 relative overflow-hidden">
@@ -51,10 +37,10 @@ const JourneySection = () => {
       <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
-            My Journey
+            {siteContent.journey.heading}
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
-            From college → startups → big tech → entrepreneurial ambitions. A story of continuous learning, risk-taking, and building.
+            {siteContent.journey.subheading}
           </p>
         </div>
 
