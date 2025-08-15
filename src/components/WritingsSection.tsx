@@ -1,20 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import BlogCard from '@/components/BlogCard';
-import { getRecentPosts } from '@/lib/blog';
+import { useRecentPosts } from '@/hooks/useBlog';
 import { Button } from '@/components/ui/button';
 
 const WritingsSection = () => {
   const navigate = useNavigate();
-  const posts = getRecentPosts(3);
-
-  const handlePostClick = (slug: string) => {
-    navigate(`/blog/${slug}`);
-  };
-
-  const handleViewAllPosts = () => {
-    navigate('/blog');
-  };
+  const posts = useRecentPosts(3);
 
   return (
     <section id="writings" className="py-20 bg-muted/30">
@@ -33,7 +25,7 @@ const WritingsSection = () => {
             <BlogCard
               key={post.slug}
               post={post}
-              onClick={() => handlePostClick(post.slug)}
+              onClick={() => navigate(`/blog/${post.slug}`)}
               layout="horizontal"
             />
           ))}
@@ -43,7 +35,7 @@ const WritingsSection = () => {
           <Button 
             variant="outline" 
             size="lg"
-            onClick={handleViewAllPosts}
+            onClick={() => navigate('/blog')}
             className="hover:bg-accent hover:text-accent-foreground"
           >
             View All Posts
