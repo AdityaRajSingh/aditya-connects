@@ -88,10 +88,18 @@ export function getPostContent(slug: string): string {
   return html;
 }
 
+const iconCache = new Map<string, string>();
+const icons = ['💡', '🚀', '⚡', '🎯', '🔮', '🌟', '📝', '🎨', '⭐', '🔥'];
+
 export const getBlogIcon = (title: string) => {
-  const icons = ['💡', '🚀', '⚡', '🎯', '🔮', '🌟', '📝', '🎨', '⭐', '🔥'];
+  if (iconCache.has(title)) {
+    return iconCache.get(title)!;
+  }
+  
   const hash = title.split('').reduce((a, b) => a + b.charCodeAt(0), 0);
-  return icons[Math.abs(hash) % icons.length];
+  const icon = icons[Math.abs(hash) % icons.length];
+  iconCache.set(title, icon);
+  return icon;
 };
 
 export const formatDate = (dateString: string) =>

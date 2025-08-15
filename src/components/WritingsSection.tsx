@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BlogCard from '@/components/BlogCard';
 import { useRecentPosts } from '@/hooks/useBlog';
@@ -7,6 +7,14 @@ import { Button } from '@/components/ui/button';
 const WritingsSection = () => {
   const navigate = useNavigate();
   const posts = useRecentPosts(3);
+  
+  const handlePostClick = useCallback((slug: string) => {
+    navigate(`/blog/${slug}`);
+  }, [navigate]);
+  
+  const handleViewAllClick = useCallback(() => {
+    navigate('/blog');
+  }, [navigate]);
 
   return (
     <section id="writings" className="py-20 bg-muted/30">
@@ -25,7 +33,7 @@ const WritingsSection = () => {
             <BlogCard
               key={post.slug}
               post={post}
-              onClick={() => navigate(`/blog/${post.slug}`)}
+              onClick={() => handlePostClick(post.slug)}
               layout="horizontal"
             />
           ))}
@@ -35,7 +43,7 @@ const WritingsSection = () => {
           <Button 
             variant="outline" 
             size="lg"
-            onClick={() => navigate('/blog')}
+            onClick={handleViewAllClick}
             className="hover:bg-accent hover:text-accent-foreground"
           >
             View All Posts

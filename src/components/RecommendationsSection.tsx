@@ -32,8 +32,8 @@ const RecommendationsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
-          {quotes.map((q, index) => (
-            <Card key={index} className="hover-lift bg-card border-border">
+          {quotes.map((q) => (
+            <Card key={`${q.author}-${q.role}`} className="hover-lift bg-card border-border">
               <CardContent className="p-5 md:p-6">
                 <div className="w-12 h-12 rounded-full bg-gradient-teal flex items-center justify-center mb-4">
                   <Quote className="w-6 h-6 icon-contrast" />

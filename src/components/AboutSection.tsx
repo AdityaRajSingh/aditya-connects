@@ -38,8 +38,8 @@ const AboutSection = () => {
                 {siteContent.about.principlesHeading}
               </h4>
               <ul className="space-y-4">
-                {siteContent.about.principles.map((item, idx) => (
-                  <li key={idx}>
+                {siteContent.about.principles.map((item) => (
+                  <li key={item.title}>
                     <span className="font-bold text-primary">{item.title}</span>
                     <span className="ml-2 text-muted-foreground">{item.body}</span>
                   </li>
@@ -58,8 +58,8 @@ const AboutSection = () => {
                 {siteContent.about.beyondHeading}
               </h4>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                {siteContent.about.beyondBullets.map((bullet, idx) => (
-                  <li key={idx}>{bullet}</li>
+                {siteContent.about.beyondBullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
                 ))}
               </ul>
             </div>

@@ -40,12 +40,12 @@ const ConnectSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-4xl mx-auto">
-          {links.map((link, index) => {
+          {links.map((link) => {
             const Icon = ICONS[link.label] || Mail;
             const isExternal = link.href.startsWith('http');
             return (
               <a
-                key={index}
+                key={link.href}
                 href={link.href}
                 target={isExternal ? '_blank' : undefined}
                 rel={isExternal ? 'noopener noreferrer' : undefined}

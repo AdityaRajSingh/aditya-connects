@@ -28,7 +28,7 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold text-foreground mb-3 sm:mb-4">Navigate</h4>
               <div className="space-y-1 sm:space-y-2">
-                {siteContent.footer.navigation.map((item, idx) => {
+                {siteContent.footer.navigation.map((item) => {
                   if (item.href.startsWith("#")) {
                     return (
                       <button
@@ -71,7 +71,7 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold text-foreground mb-3 sm:mb-4">Connect</h4>
               <div className="space-y-1 sm:space-y-2">
-                {siteContent.footer.socials.map((link, idx) => {
+                {siteContent.footer.socials.map((link) => {
                   const isExternal = link.href.startsWith('http');
                   return (
                     <a

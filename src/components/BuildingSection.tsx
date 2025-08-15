@@ -46,11 +46,11 @@ const BuildingSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
-          {items.map((item, index) => {
+          {items.map((item) => {
             const Icon = item.icon && ICONS[item.icon] ? ICONS[item.icon] : Lightbulb;
             const colorClass = item.color && COLOR_CLASSES[item.color] ? COLOR_CLASSES[item.color] : "bg-card";
             return (
-              <Card key={index} className="hover-lift bg-card border-border group overflow-hidden">
+              <Card key={item.title} className="hover-lift bg-card border-border group overflow-hidden">
                 <div className={`h-2 ${colorClass}`}></div>
                 <CardHeader>
                   <div className="flex items-center justify-between mb-3">
