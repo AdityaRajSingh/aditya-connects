@@ -65,18 +65,13 @@ const AboutSection = () => {
             </div>
             
             <div className="mt-8 flex flex-wrap gap-4">
-              <div className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Building
-              </div>
-              <div className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                Learning
-              </div>
-              <div className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Traveling
-              </div>
-              <div className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                Photography
-              </div>
+              {siteContent.about.tags.map((tag, index) => (
+                <div key={tag} className={`px-4 py-2 rounded-full text-sm font-medium ${
+                  index % 2 === 0 ? 'bg-primary/10 text-primary' : 'bg-accent/10 text-accent'
+                }`}>
+                  {tag}
+                </div>
+              ))}
             </div>
           </div>
         </div>

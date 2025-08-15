@@ -11,8 +11,14 @@ const ThemeToggle = () => {
   useEffect(() => {
     setMounted(true);
     // Set default theme to system on initial load if no theme is set
-    if (!localStorage.getItem('theme')) {
-      setTheme('system');
+    if (typeof window !== 'undefined') {
+      try {
+        if (!localStorage.getItem('theme')) {
+          setTheme('system');
+        }
+      } catch {
+        setTheme('system');
+      }
     }
   }, [setTheme]);
 

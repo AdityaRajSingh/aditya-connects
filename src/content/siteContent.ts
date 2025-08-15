@@ -180,7 +180,8 @@ export const siteContent = {
       "Exploring new cities",
       "Diving into financial markets",
       "Geeking out on philosophy and life design"
-    ]
+    ],
+    tags: ["Building", "Learning", "Traveling", "Photography"]
   },
 
   footer: {
@@ -190,7 +191,7 @@ export const siteContent = {
       { label: "LinkedIn", href: "https://www.linkedin.com/in/adityaraj-singh/" },
       { label: "GitHub", href: "https://github.com/AdityaRajSingh" },
       { label: "Topmate", href: "https://topmate.io/aditya_raj_singh" },
-      { label: "Twitter", href: "https://x.com/adityaraj_ars" },
+      { label: "Twitter", href: "https://x.com/adityarajsingh_" },
       { label: "Email", href: "mailto:adi4adityaraj@gmail.com" }
     ],
     navigation: [

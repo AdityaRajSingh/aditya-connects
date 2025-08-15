@@ -15,6 +15,15 @@ const ShareFooter = ({ title, url }: ShareFooterProps) => {
   const shareUrls = getShareUrls(title, url);
 
   const copyToClipboard = async () => {
+    if (!navigator.clipboard) {
+      toast({
+        title: "Copy not supported",
+        description: "Please copy the link manually from the address bar.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
