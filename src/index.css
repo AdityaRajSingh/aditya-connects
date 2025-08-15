@@ -336,6 +336,27 @@
   .hover-lift {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  /* Rotating subtitle animation: slow, smooth crossfade + gentle float to match star motion */
+  .transition-subtitle {
+    opacity: 0;
+    transform: translateY(6px) scale(0.995);
+    animation-name: subtitle-fade;
+    animation-duration: 9s; /* total loop duration */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    /* stagger each item by index via custom property --i */
+    animation-delay: calc(var(--i) * 3s);
+  }
+
+  @keyframes subtitle-fade {
+    0% { opacity: 0; transform: translateY(6px) scale(0.995); }
+    8% { opacity: 1; transform: translateY(0) scale(1); }
+    30% { opacity: 1; transform: translateY(0) scale(1); }
+    38% { opacity: 0; transform: translateY(-6px) scale(0.995); }
+    100% { opacity: 0; transform: translateY(-6px) scale(0.995); }
+  }
   
   .hover-lift:hover {
     transform: translateY(-4px);

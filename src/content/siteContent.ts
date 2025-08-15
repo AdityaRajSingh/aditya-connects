@@ -1,11 +1,31 @@
 export const siteContent = {
   hero: {
-    title: "Hi, I’m Aditya.",
-    subtitle: "Software Developer at Google · Entrepreneur at heart",
-    kicker: "AI‑first builder & lifelong learner",
+    // legacy combined strings (kept for compatibility)
+    title: "Hi, I'm Aditya.",
+    subtitle: "A Software Developer.",
+    kicker: "AI-first builder & lifelong learner",
+
+    // subtitleVariants: three variants for the animated subtitle (HTML strings allowed)
+    // keep styling classes inside the strings so the highlight matches current appearance
+    subtitleVariants: [
+      `A <span class="text-primary font-semibold">Software Developer</span>`,
+      `Entrepreneurial Mindset`,
+      `Driven by <span class="text-primary font-semibold">AI & Curiosity</span>`
+    ],
+
+    // structured fields used for styling in the content-refresh branch
+    titlePrefix: "Hi, I'm",
+    name: "Aditya",
+    titleSuffix: ".",
+
+    subtitlePrefix: 'A',
+    subtitleMain: 'Software Developer',
+    subtitleSuffix: '.',
+
     body:
-      "With four years spanning startups and big tech, I build products that scale and solve real problems. I thrive on learning, problem‑solving, and sharing ideas—currently exploring the frontiers of Artificial Intelligence.",
-    cta: { label: "My Journey", href: "#journey" }
+      "With four years at Google, I've navigated the worlds of big tech and startups, driven by a passion for solving complex problems. I thrive on building, learning, and sharing my journey in tech, AI, and life. Currently exploring the frontiers of Artificial Intelligence and its power to change our world.",
+
+    cta: { label: 'My Journey', href: '#journey' },
   },
 
   journey: {
@@ -48,10 +68,10 @@ export const siteContent = {
         body:
           "An intelligent coding companion that blends AI with developer workflows for smarter, faster solutions.",
         tech: ["Python", "OpenAI", "React"],
-        icon: "code",               // maps to lucide-react <Code />
-        color: "gradient-purple",   // token we’ll map to a class
+        icon: "code",
+        color: "gradient-purple",
         links: {
-          repo: null,               // set to GitHub URL when ready
+          repo: null,
           demo: null
         }
       },
@@ -61,7 +81,7 @@ export const siteContent = {
         body:
           "A real‑time dashboard to track markets, analyze portfolios, and surface investment insights.",
         tech: ["Next.js", "D3.js", "APIs"],
-        icon: "lightbulb",          // lucide-react <Lightbulb />
+        icon: "lightbulb",
         color: "gradient-teal",
         links: {
           repo: null,
@@ -205,3 +225,4 @@ export type BuildingItem = {
   color?: "gradient-purple" | "gradient-teal" | "gradient-warm";
   links?: { repo?: string | null; demo?: string | null };
 };
+

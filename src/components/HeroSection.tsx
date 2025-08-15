@@ -38,12 +38,31 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
         <div className="animate-fade-in">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
-            {siteContent.hero.title}
+            {siteContent.hero.titlePrefix}{' '}
+            <span className="text-primary">{siteContent.hero.name}</span>
+            <span className="text-accent">{siteContent.hero.titleSuffix}</span>
           </h1>
-          
+
           <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-foreground mb-6 sm:mb-8 animate-slide-up">
-            <span>{siteContent.hero.subtitle}</span>
-            <span className="text-primary font-semibold"> · {siteContent.hero.kicker}</span>
+            {/* Animated subtitle variants (fetched from siteContent) */}
+            <div className="relative w-full">
+              {/* invisible placeholder reserves the original subtitle height so spacing matches main branch */}
+              <span className="invisible block">
+                {siteContent.hero.subtitle}
+              </span>
+
+              <div className="absolute inset-0 flex items-center justify-center">
+                {siteContent.hero.subtitleVariants?.map((s, i) => (
+                  <div
+                    key={i}
+                    className="absolute left-0 right-0 text-center whitespace-normal transition-subtitle"
+                    style={{ ['--i' as any]: i }}
+                    // render HTML so the inner span classes are preserved
+                    dangerouslySetInnerHTML={{ __html: s }}
+                  />
+                ))}
+              </div>
+            </div>
           </h2>
           
           <div className="max-w-4xl mx-auto mb-8 sm:mb-12">
